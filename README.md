@@ -7,7 +7,7 @@ Python version of the Mid-level Vision Toolbox (MLVToolbox) created by the BWLab
 
 The Mid-level Vision Toolbox (MLVToolbox) was created by the BWLab at the University of Toronto as a tool for researchers to extract structural properties of contours such as orientation, length, curvature and junctions present in images. MLVToolbox allows researchers to quantify the presence of perceptual organization cues such as mirror symmetry, ribbon symmetry, and taper symmetry using medial axis properties of contours in naturalistic images. MLVToolbox also provides researchers with a free and easy way to extract visual statistics that underlie our experience of surfaces, objects, scenes and even works of art. It will facilitate reproducible experimental stimulus sets using built-in functions that manipulate contours in images based on one or several mid-level vision properties. In addition, MLVToolbox offers several visualization functions for tracing contour orientations, lengths, curvature, junctions, as well as, medial axis properties on computer-generated and artist-generated line drawings. A contour extraction functionality helps users obtain computer-generated line drawings from real-world photographs. To encourage researcher's exploration of its potential, we have provided several example datasets produced using the MLVToolbox.
 
-This python version now contains most of the functions that are associated with the demos to get contour features and the medial axis demo. The functions related to traceLineDrawing demo is in the final stages of testing. The <br> 
+This Python version now includes most of the functions required for demonstrations that retrieve contour features and the medial axis. The functions related to the TraceLineDrawing demo are in the final stages of testing. <br> 
 *_Please stay tuned for updates!_* 
 
 ## Table of Contents
@@ -18,6 +18,39 @@ This python version now contains most of the functions that are associated with 
 - [References](#References)
 - [License](#License)
 - [Detailed Function Documentation](https://htmlpreview.github.io/?https://github.com/bwlabToronto/pyMVPA/blob/main/docs/html/index.html)
+
+## Requirements
+
+<!-- Write that there is a requirements.txt -->
+The pyMVPA toolbox requires Python packages which can be installed using the requirements.txt file. To install the required packages, run the following command in the terminal:
+
+```pip3 install -r requirements.txt```
+
+## Usage
+
+The pyMVPA toolbox is designed to be user-friendly and easy to use. The toolbox includes several demos that demonstrate the functionality of the toolbox. The demos are located in the `demos` folder. The demos are written in Jupyter notebooks and can be run in JupyterLab or Jupyter Notebook.
+
+To run the demos, follow these steps:
+1. Clone the repository to your local machine.
+2. Navigate to the `demos` folder.
+3. Open the desired demo in JupyterLab or Jupyter Notebook.
+4. Run the cells in the notebook to see the results.
+
+The demos include the following:
+* [Demo_ContourFeatures](demos/getcontourfeatures_Single.ipynb): This demo shows how to extract contour features from an image, including orientation, length, curvature, and junctions.
+* [Demo_MedialAxis](demos/getMedialAxis.ipynb): This demo shows how to extract the medial axis of an image and visualize it.
+
+Note: The medial axis demo at the moment needs the imgLD from the MATLAB version due the difference in the way rendering is done in Python and MATLAB. We are working on a solution to this issue.
+
+**Computing Medial Axis Properties**
+
+<img src='images/medial_axis_transform.png' width=70%> 
+
+Using MLV, one can compute accurate AOF-based medial axis transform (MAT) from binary images. These images can either be rendered from LineDrawing (LD) datastructures (check out renderLinedrawing.m function) or be binary images from other sources. Like the example (bunny) above shows, there are some intermediate steps in the process of extracting MAT, including the extraction of the distance map as well as the extraction of the average outward flux map (AOF). This information along with the skeleton is stored in the MAT computed from a binary image. Please see the following example of a mountain scene where the average outward flux map (AOF) is computed from the binary image. 
+
+Output:
+
+<img src='images/fluxOutput.png' width=70%>
 
 ## Datasets
 
