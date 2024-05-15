@@ -23,21 +23,6 @@ def computeCurvature(vecLD):
     Contact: dirk.walther@gmail.com
     -----------------------------------------------------
     """
-    # # Check if 'lengths' attribute exists
-    # print("IT DOES HAVE",len(vecLD['lengths'][0]))
-    # # if hasattr(vecLD, 'lengths'):
-    # #     print("'lengths' exists")
-    # #     print("Type of 'lengths':", type(vecLD['lengths']))
-    # # else:
-    # #     print("'lengths' does not exist, computing lengths")
-    # #     vecLD = computeLength(vecLD)
-
-    # if not hasattr(vecLD, 'lengths'):
-    #     print('Computing contour lengths')
-    #     vecLD = computeLength(vecLD)
-    # if not hasattr(vecLD, 'orientations'):
-    #     vecLD = computeOrientation(vecLD)
-
     if "lengths" not in vecLD:
         # print("No lengths in vecLD")
         vecLD = computeLength(vecLD)
@@ -65,7 +50,7 @@ def computeCurvature(vecLD):
             angleDiff = np.abs(vecLD['orientations'][c][s] - vecLD['orientations'][c][s2])
             if angleDiff > 180:
                 angleDiff = 360 - angleDiff # For angles > 180, we take the opposite angle
-            vecLD['curvatures'][c].append(angleDiff / vecLD['lengths'][0][c][s])
+            vecLD['curvatures'][c].append(angleDiff / (vecLD['lengths'][0][c][s]+1e-10)) # Add a small number to avoid division by zero
 
 
     return vecLD

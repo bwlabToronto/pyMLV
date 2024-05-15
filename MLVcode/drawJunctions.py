@@ -45,7 +45,7 @@ def drawJunctions(Junctions,
         types = [types]
     
     # Special case of a vectorized line drawing
-    if 'contours' in Junctions.dtype.names:
+    if 'contours' in Junctions[0].keys():
         drawLinedrawing(Junctions)
         Junctions = Junctions['junctions']
     
@@ -61,12 +61,13 @@ def drawJunctions(Junctions,
         colors = [default_colors[i % len(default_colors)] for i in range(len(types))]
 
     
-    positions = np.array([j['position'] for j in Junctions[0]]).reshape(-1,2)
+    positions = np.array([j['position'] for j in Junctions]).reshape(-1,2)
+    print()
     h = []
     for t in range(len(types)):
         typeIdx = [types[t] == junction_type for junction_type in junctionTypes]
         trueIdx = np.where(typeIdx)
-        Idx = positions[trueIdx[1]]
+        Idx = positions[trueIdx]
        
         color_Idx = np.repeat([colors[t]], len(Idx), axis=0)
         plot = plt.scatter(Idx[:,0], Idx[:,1],

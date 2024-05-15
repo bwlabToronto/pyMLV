@@ -1,10 +1,10 @@
 import numpy as np
 import math
 import warnings
-from lineIntersection import lineIntersection
+from MLVcode.lineIntersection import lineIntersection
 
 
-def detectJunctions(vecLD, AE=1, RE=0.3):
+def detectJunctions(vec_ld, ae=1, re=0.3):
     """
     Detects any junctions between contours in the vectorized line drawing (vecLD).
 
@@ -44,29 +44,30 @@ def detectJunctions(vecLD, AE=1, RE=0.3):
     Contact: dirk.walther@gmail.com
     -----------------------------------------------------
     """
-    # Function implementation goes here
+    junctions = []
 
-    # RE (relative epsilon) - the same relative to the lentgh of a segment - the stricter of the two criteria will be applied.
-    # AE (absolute epsilon) - to accept two lines as "intersecting" even when they may be seprated by 0 pixels.
-
-    Junctions = {}
-    count = 0
-
-    for queryC in range(vecLD['numContours']):
-        if vecLD['contourLengths'][queryC] <AE: # if the curve is too short, then don't consider it
+    for query_c in range(vec_ld['numContours'][0][0]):
+        if vec_ld['contourLengths'][query_c][0] < ae:  # Ignore too short curves
             continue
-
-        queryCurve = vecLD['contours'][queryC]
-        for queryS in range(len(queryCurve)-1): # loop over the query line segments
-            for refC in range(queryC+1, vecLD['numContours']): # we don't consider intersections fo the curve with itself
-                if vecLD['contourLengths'][refC] <AE: # if the curve is too short, then don't consider it
+        
+        query_curve = vec_ld['contours'][0][query_c]
+        for query_s in range(len(query_curve)):
+            for ref_c in range(query_c + 1, vec_ld['numContours'][0][0]):
+                if vec_ld['contourLengths'][ref_c][0] < ae:  # Ignore too short curves
                     continue
-                refCurve = vecLD['contours'][refC]
+                
+                ref_curve = vec_ld['contours'][0][ref_c]
+                
+                for ref_s in range(len(ref_curve)):
+                    position = lineIntersection(query_curve[query_s].astype(float), ref_curve[ref_s].astype(float), re, ae)
+                    
+                    if position is not None:
+                        junction = {
+                            'position': position,
+                            'contourIDs': [query_c, ref_c],
+                            'segmentIDs': [query_s, ref_s]
+                        }
+                        junctions.append(junction)
+    
+    return junctions
 
-                for refS in range(len(refCurve)): # loop over the reference line segments
-                    pos = lineIntersection(queryCurve[queryS], refCurve[refS], RE, AE)
-                    if pos is not None:
-                        count += 1
-                        Junctions[count] = {'Position': pos, 'contourIDs': [queryC, refC], 'segmentIDs': [queryS, refS]}
-
-    return Junctions

@@ -1,7 +1,8 @@
 import math
 import warnings
-from MLVcode.drawThisProperty import drawThisProperty
 import matplotlib.pyplot as plt
+from MLVcode.drawThisProperty import drawThisProperty
+
 
 def drawAllProperties(vecLD, mode='subplot', properties=['Original','Length',
                                                'Orientation','Curvature',

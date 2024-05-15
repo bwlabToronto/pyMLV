@@ -3,7 +3,7 @@ import math
 import warnings
 
 
-def lineIntersection(queryLine, refLine, RE = 0.3, AE = 2.0):
+def lineIntersection(query_line, ref_line, re = 0.3, ae = 2.0):
     """
     Determines the intersection point, if any, between two line segments.
 
@@ -41,51 +41,51 @@ def lineIntersection(queryLine, refLine, RE = 0.3, AE = 2.0):
     -----------------------------------------------------
     """
     eps = 1e-4
+    
+    ay = query_line[2] - query_line[0]
+    ax = query_line[3] - query_line[1]
+    # print("Term1: ", query_line[3], "Term2: ", query_line[1], "Term3: ", ax)
+    by = ref_line[2] - ref_line[0]
+    bx = ref_line[3] - ref_line[1]
+    cy = ref_line[0] - query_line[0]
+    cx = ref_line[1] - query_line[1]
 
-    Ay = queryLine[3] - queryLine[1]
-    Ax = queryLine[2] - queryLine[0]
-    By = refLine[3] - refLine[1]
-    Bx = refLine[2] - refLine[0]
-    Cy = refLine[0] - queryLine[0]
-    Cx = refLine[1] - queryLine[1]
+    d = ay * bx - ax * by
+    
+    if d == 0:  # Lines are parallel or coincident
+        return None
 
-    D = Ay * Bx - Ax * By
+    a = (bx * cy - by * cx) / d
+    b = (ax * cy - ay * cx) / d
 
-    warnings.filterwarnings("ignore", category=RuntimeWarning)  # divide by zero is okay here
-    a = (Bx * Cy - By * Cx) / D
-    b = (Ax * Cy - Ay * Cx) / D
+    at = min(re, ae / max(abs(ax), abs(ay)))
+    bt = min(re, ae / max(abs(bx), abs(by)))
 
-    at = min(RE, AE / max(abs(Ax), abs(Ay)))  # calculate the threshold of the ratio
-    bt = min(RE, AE / max(abs(Bx), abs(By)))  # calculate the threshold of the ratio
-
-    if (-at <= a) and (a <= 1 + at) and (-bt <= b) and (b <= 1 + bt):
-        # special cases where a or b are 0 or 1
+    if (-at <= a <= 1 + at) and (-bt <= b <= 1 + bt):
+        # Check for special cases where a or b are 0 or 1
         if abs(a) < eps:
-            Position = queryLine[0:2]
+            return np.array(query_line[:2])
         elif abs(a - 1) < eps:
-            Position = queryLine[2:4]
+            return np.array(query_line[2:])
         elif abs(b) < eps:
-            Position = refLine[0:2]
+            return np.array(ref_line[:2])
         elif abs(b - 1) < eps:
-            Position = refLine[2:4]
+            return np.array(ref_line[2:])
         else:
-            # General case
-            A1 = queryLine[1] - queryLine[3]
-            B1 = queryLine[2] - queryLine[0]
-            C1 = queryLine[0] * queryLine[3] - queryLine[1] * queryLine[2]
+            # General case for calculating the intersection
+            a1 = query_line[1] - query_line[3]
+            b1 = query_line[2] - query_line[0]
+            c1 = query_line[0] * query_line[3] - query_line[1] * query_line[2]
 
-            A2 = refLine[1] - refLine[3]
-            B2 = refLine[2] - refLine[0]
-            C2 = refLine[0] * refLine[3] - refLine[1] * refLine[2]
+            a2 = ref_line[1] - ref_line[3]
+            b2 = ref_line[2] - ref_line[0]
+            c2 = ref_line[0] * ref_line[3] - ref_line[1] * ref_line[2]
 
-            D = A1 * B2 - A2 * B1
+            dd = a1 * b2 - a2 * b1
 
-            Position = np.zeros(2)
-            Position[0] = (B1 * C2 - B2 * C1) / D
-            Position[1] = (A2 * C1 - A1 * C2) / D
-            if any(Position < 0):
-                Position = []
+            x = (b1 * c2 - b2 * c1) / dd
+            y = (a2 * c1 - a1 * c2) / dd
+            
+            return np.array([x, y])
     else:
-        Position = []
-
-    return Position
+        return None

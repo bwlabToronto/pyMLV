@@ -1,7 +1,7 @@
 from MLVcode.computeOrientation import computeOrientation
 from MLVcode.computeLength import computeLength
 from MLVcode.computeCurvature import computeCurvature
-from MLVcode.computeJunctions_FIX import computeJunctions
+from MLVcode.computeJunctions import computeJunctions
 # from computeOrientation import computeOrientation
 # from computeLength import computeLength
 # from computeCurvature import computeCurvature
@@ -44,7 +44,7 @@ def computeContourProperties(vecLD,
         elif thisProp == 'curvature':
             vecLD = computeCurvature(vecLD) 
         elif thisProp == 'junctions':
-            vecLD = computeJunctions(vecLD) # Need to write code for this
+            vecLD = computeJunctions(vecLD)
         else:
             raise ValueError('Unknown property: ' + thisProp)
     return vecLD

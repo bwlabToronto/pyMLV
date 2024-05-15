@@ -58,7 +58,10 @@ def computeColorIndex(vecLD, property):
         minProp = np.min(allCurv)
         max_min = maxProp - minProp
         for i in range(vecLD['numContours'][0][0]):
-            colorIdx.append(np.minimum(np.round((np.log10(rowCurv[i]+1)-minProp)/max_min*(255)+1),256))
+            # curv_log = np.log10(rowCurv[i] + 1)
+            # scaled_value = (curv_log - minProp) / (max_min + 1e-10) * 255 + 1
+            # colorIdx.append(int(np.minimum(np.round(scaled_value), 256)))
+            colorIdx.append(np.minimum(np.round((np.log10(rowCurv[i]+1)-minProp)/(max_min+1e-10)*(255)+1),256))
         cmap = plt.get_cmap('jet', numCols)
     elif property == 'orientation':
         colorIdx = []

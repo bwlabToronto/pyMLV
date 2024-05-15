@@ -1,5 +1,5 @@
 import numpy as np
-from MLVcode.computeJunctions_FIX import computeJunctions
+from MLVcode.computeJunctions import computeJunctions
 
 
 def getJunctionStats(vecLD,
@@ -36,7 +36,7 @@ def getJunctionStats(vecLD,
     if 'junctions' not in vecLD:
         vecLD = computeJunctions(vecLD)
 
-    if len(vecLD['junctions'][0].shape) == 0:
+    if len(vecLD['junctions']) == 0:
         vecLD['junctionContourHistograms'] = np.zeros((vecLD['numContours'][0][0],
                                                        len(junctionTypes)))
         vecLD['normJuctionContourHistograms'] = np.zeros((vecLD['numContours'][0][0],
@@ -50,7 +50,7 @@ def getJunctionStats(vecLD,
                                                          len(junctionTypes)))
         for t, jt in enumerate(junctionTypes):
             this_j = []
-            for j_type in these_types[0]:
+            for j_type in these_types:
                 if j_type == jt:
                     this_j.append(1)
                 else:
@@ -58,11 +58,10 @@ def getJunctionStats(vecLD,
             
             type_hist[t] = np.sum(this_j)
             contours = []
-            for i in range(len(vecLD['junctions'][0])):
+            for i in range(len(vecLD['junctions'])):
                 if this_j[i] == 1:
-                    contours.append(vecLD['junctions'][0]['contourIDs'][i])
-            # print("Size of contours: ", len(contours))
-            contours = [item for sublist in contours for sublist_item in sublist for item in sublist_item]
+                    contours.append(vecLD['junctions'][i]['contourIDs'])
+            contours = [item for sublist in contours for item in sublist]
             for c in np.unique(contours):
                 vecLD['junctionContourHistograms'][c-1,t] = np.sum(np.array(contours) == c)
             vecLD['normJunctionContourHistograms'] = (
@@ -73,18 +72,21 @@ def getJunctionStats(vecLD,
 
     vecLD['junctionTypeBins'] = junctionTypes
 
-    # Junction Angles - Histogram needs to be fixed
+    # Junction Angles
     maxAngle = 120
     binStep = maxAngle / numAngleBins
     angleBins = np.arange(binStep/2, maxAngle, binStep)
-    if len(vecLD['junctions'][0].shape) == 0:
+    if len(vecLD['junctions']) == 0:
         # print("IF")
         vecLD['junctionAngleHistogram'] = np.zeros(len(junctionTypes))
         vecLD['normJunctionAngleHistogram'] = np.zeros(len(junctionTypes))
         histograms = [np.array([]), np.array([])]
     else:
         # print("ELSE")
-        angles = vecLD['junctions']['minAngle'][0]
+        angles = []
+        for i in range(len(vecLD['junctions'])):
+            angles.append(vecLD['junctions'][i]['minAngle'])
+        # angles = vecLD['junctions']['minAngle'][0]
         angleHist, _ = np.histogram(angles, bins=angleBins)
         vecLD['junctionAngleHistogram'] = angleHist
         vecLD['normJunctionAngleHistogram'] = angleHist / np.sum(vecLD['contourLengths']) * 10000
