@@ -1,0 +1,45 @@
+\doxysection{split\+LDby\+Stats\+Model Namespace Reference}
+\hypertarget{namespacesplit_l_dby_stats_model}{}\label{namespacesplit_l_dby_stats_model}\index{splitLDbyStatsModel@{splitLDbyStatsModel}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesplit_l_dby_stats_model_ab002d07c11b7e720915eaf863bd65653}{split\+LDby\+Stats\+Model}} (vec\+LD, Mdl, fraction)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacesplit_l_dby_stats_model_ab002d07c11b7e720915eaf863bd65653}\label{namespacesplit_l_dby_stats_model_ab002d07c11b7e720915eaf863bd65653} 
+\index{splitLDbyStatsModel@{splitLDbyStatsModel}!splitLDbyStatsModel@{splitLDbyStatsModel}}
+\index{splitLDbyStatsModel@{splitLDbyStatsModel}!splitLDbyStatsModel@{splitLDbyStatsModel}}
+\doxysubsubsection{\texorpdfstring{splitLDbyStatsModel()}{splitLDbyStatsModel()}}
+{\footnotesize\ttfamily split\+LDby\+Stats\+Model.\+split\+LDby\+Stats\+Model (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{Mdl,  }\item[{}]{fraction }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Splits up the contours in the line drawing vecLD according to a
+pre-trained regression model.
+
+Parameters:
+- vecLD (dict): Vectorized line drawing to be split. The structure should
+                already contain all relevant feature histograms.
+- Mdl: The pre-trained regression model to apply to contour features
+       in order to split the drawing. This could be an instance of a model
+       from scikit-learn or any other library.
+- fraction (float): The fraction of pixels to preserve. Only whole contours
+                    will be assigned. The splitting is conservative such
+                    that at most this fraction of pixels are preserved.
+
+Returns:
+- topLD (dict): Line drawing structure with the top-ranked contours.
+- bottomLD (dict): Line drawing structure with the bottom-ranked contours.
+
+Note:
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox: 
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

@@ -1,0 +1,48 @@
+\doxysection{draw\+Junctions Namespace Reference}
+\hypertarget{namespacedraw_junctions}{}\label{namespacedraw_junctions}\index{drawJunctions@{drawJunctions}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacedraw_junctions_a0f0695745472d0ef5681694f90f19dd4}{draw\+Junctions}} (Junctions, types=\mbox{[}\textquotesingle{}T\textquotesingle{}, \textquotesingle{}Y\textquotesingle{}, \textquotesingle{}X\textquotesingle{}, \textquotesingle{}Arrow\textquotesingle{}, \textquotesingle{}Star\textquotesingle{}\mbox{]}, Marker\+Size=10, colors=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacedraw_junctions_a0f0695745472d0ef5681694f90f19dd4}\label{namespacedraw_junctions_a0f0695745472d0ef5681694f90f19dd4} 
+\index{drawJunctions@{drawJunctions}!drawJunctions@{drawJunctions}}
+\index{drawJunctions@{drawJunctions}!drawJunctions@{drawJunctions}}
+\doxysubsubsection{\texorpdfstring{drawJunctions()}{drawJunctions()}}
+{\footnotesize\ttfamily draw\+Junctions.\+draw\+Junctions (\begin{DoxyParamCaption}\item[{}]{Junctions,  }\item[{}]{types = {\ttfamily \mbox{[}\textquotesingle{}T\textquotesingle{},~\textquotesingle{}Y\textquotesingle{},~\textquotesingle{}X\textquotesingle{},~\textquotesingle{}Arrow\textquotesingle{},~\textquotesingle{}Star\textquotesingle{}\mbox{]}},  }\item[{}]{Marker\+Size = {\ttfamily 10},  }\item[{}]{colors = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Draws the junctions into the current figure.
+
+Args:
+    Junctions (array or LineDrawingStructure): The junctions to be drawn. E.g., from vecLD.junctions.
+        Alternatively, you can provide the entire vectorized line drawing with the junctions included (LineDrawingStructure).
+
+    types (list of str, optional): A list of junction types to be drawn in order. You can use any combination of 'T', 'Y', 'X', 'Arrow', 'Star'.
+        Default is an empty list, which means all junctions are drawn.
+
+    MarkerSize (int, optional): The size of the marker for the junctions. Default is 5.
+
+    colors (array-like, optional): An Nx3 array of RGB values to be used as colors for the markers.
+        Default is to use the default color map specified by Matplotlib for line plots.
+
+Returns:
+    None
+
+See also:
+    drawLinedrawing
+    drawLinedrawingProperty
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright (c) 2022 Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

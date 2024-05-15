@@ -1,0 +1,44 @@
+\doxysection{get\+Orientation\+Stats Namespace Reference}
+\hypertarget{namespaceget_orientation_stats}{}\label{namespaceget_orientation_stats}\index{getOrientationStats@{getOrientationStats}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceget_orientation_stats_ae8bc3c6b2350ecf1abc5030f48410fc7}{get\+Orientation\+Stats}} (vec\+LD, num\+Bins=8)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceget_orientation_stats_ae8bc3c6b2350ecf1abc5030f48410fc7}\label{namespaceget_orientation_stats_ae8bc3c6b2350ecf1abc5030f48410fc7} 
+\index{getOrientationStats@{getOrientationStats}!getOrientationStats@{getOrientationStats}}
+\index{getOrientationStats@{getOrientationStats}!getOrientationStats@{getOrientationStats}}
+\doxysubsubsection{\texorpdfstring{getOrientationStats()}{getOrientationStats()}}
+{\footnotesize\ttfamily get\+Orientation\+Stats.\+get\+Orientation\+Stats (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{num\+Bins = {\ttfamily 8} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes the orientation histogram of a vectorized line drawing, weighted by segment length.
+
+This function calculates the histogram of orientations of line segments in a vectorized line 
+drawing (vecLD). The histogram is weighted by the length of each line segment. The number of 
+bins for the histogram can be specified.
+
+Args:
+    vecLD (LineDrawingStructure): The vectorized line drawing data structure.
+    numBins (int, optional): Number of histogram bins. Defaults to 8.
+
+Returns:
+    tuple: A tuple (vecLD, oriHistogram, bins, shortName) where:
+        vecLD (LineDrawingStructure): The updated line drawing structure with orientation histogram added.
+        oriHistogram (numpy.ndarray): The histogram of orientations of line segments, weighted by their lengths.
+        bins (numpy.ndarray): A vector with the bin centers.
+        shortName (str): A short name identifier for the histogram, 'ori'.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

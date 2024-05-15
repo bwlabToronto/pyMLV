@@ -1,0 +1,54 @@
+\doxysection{draw\+This\+Property Namespace Reference}
+\hypertarget{namespacedraw_this_property}{}\label{namespacedraw_this_property}\index{drawThisProperty@{drawThisProperty}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacedraw_this_property_ab834150341be985a19653bdf320af043}{draw\+This\+Property}} (vec\+LD, property)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacedraw_this_property_ab834150341be985a19653bdf320af043}\label{namespacedraw_this_property_ab834150341be985a19653bdf320af043} 
+\index{drawThisProperty@{drawThisProperty}!drawThisProperty@{drawThisProperty}}
+\index{drawThisProperty@{drawThisProperty}!drawThisProperty@{drawThisProperty}}
+\doxysubsubsection{\texorpdfstring{drawThisProperty()}{drawThisProperty()}}
+{\footnotesize\ttfamily draw\+This\+Property.\+draw\+This\+Property (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{property }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Draws specific properties of a vectorized line drawing based on the specified property.
+
+This function allows for the visualization of various properties of a line drawing. 
+It supports basic drawing of the original line drawing as well as specific properties 
+like length, orientation, curvature, junctions, parallelism, separation, and mirror symmetry.
+
+Args:
+    vecLD (LineDrawingStructure): The vectorized line drawing data structure.
+    property (str): The specific property to visualize. Supported properties include 
+    'original', 'length', 'orientation', 'curvature', 'junctions', 'parallelism', 
+    'separation', and 'mirror'. The function is case-insensitive.
+
+Returns:
+    None: The function does not return a value but visualizes the specified property 
+    of the line drawing.
+
+Raises:
+    Warning: If an unknown property is specified, a warning is issued.
+
+Notes:
+- The function modifies the 'property' parameter by converting it to lowercase for 
+  case-insensitive comparison.
+- Visualization is handled by different functions based on the property. 
+  For 'original', it calls 'drawLinedrawing', for properties like 'length', 
+  'orientation', 'curvature', and 'junctions', it calls 'drawLinedrawingProperty', 
+  and for 'parallelism', 'separation', and 'mirror', it calls 'drawMATproperty'.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

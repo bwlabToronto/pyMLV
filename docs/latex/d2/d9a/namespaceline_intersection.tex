@@ -1,0 +1,52 @@
+\doxysection{line\+Intersection Namespace Reference}
+\hypertarget{namespaceline_intersection}{}\label{namespaceline_intersection}\index{lineIntersection@{lineIntersection}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceline_intersection_ad84a57cd90ae2c40c182d63352c74cd3}{line\+Intersection}} (query\+\_\+line, ref\+\_\+line, re=0.\+3, ae=2.\+0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceline_intersection_ad84a57cd90ae2c40c182d63352c74cd3}\label{namespaceline_intersection_ad84a57cd90ae2c40c182d63352c74cd3} 
+\index{lineIntersection@{lineIntersection}!lineIntersection@{lineIntersection}}
+\index{lineIntersection@{lineIntersection}!lineIntersection@{lineIntersection}}
+\doxysubsubsection{\texorpdfstring{lineIntersection()}{lineIntersection()}}
+{\footnotesize\ttfamily line\+Intersection.\+line\+Intersection (\begin{DoxyParamCaption}\item[{}]{query\+\_\+line,  }\item[{}]{ref\+\_\+line,  }\item[{}]{re = {\ttfamily 0.3},  }\item[{}]{ae = {\ttfamily 2.0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Determines the intersection point, if any, between two line segments.
+
+Given two line segments represented by their start and end points, and flexibility conditions 
+defined by relative and absolute epsilon values, this function judges whether the two line 
+segments intersect and, if so, returns the coordinates of the intersection point.
+
+Args:
+    queryLine (list or numpy.ndarray): A vector of length 4 representing the first line 
+    segment with start and end point coordinates: [X1, Y1, X2, Y2].
+    refLine (list or numpy.ndarray): A vector of length 4 representing the second line 
+    segment with start and end point coordinates: [X1, Y1, X2, Y2].
+    RE (float, optional): The relative epsilon used to judge the intersection of two lines. 
+    Default is 0.3.
+    AE (float, optional): The absolute epsilon used to judge the intersection of two lines. 
+    Default is 2 pixels.
+
+Returns:
+    list or None: The coordinates [x, y] of the intersection point if the lines do intersect. 
+    If there is no intersection, returns None.
+
+Notes:
+- 'RE' (relative epsilon) and 'AE' (absolute epsilon) are thresholds used to determine the 
+  intersection under flexible geometric constraints.
+- The function assumes line segments are defined in 2D space.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

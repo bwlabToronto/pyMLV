@@ -1,0 +1,44 @@
+\doxysection{compute\+MATproperty Namespace Reference}
+\hypertarget{namespacecompute_m_a_tproperty}{}\label{namespacecompute_m_a_tproperty}\index{computeMATproperty@{computeMATproperty}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecompute_m_a_tproperty_ada28e0871f70bca319845e2dc40edaeb}{compute\+MATproperty}} (MAT, prop, skeletal\+Branches=None, K=5)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecompute_m_a_tproperty_ada28e0871f70bca319845e2dc40edaeb}\label{namespacecompute_m_a_tproperty_ada28e0871f70bca319845e2dc40edaeb} 
+\index{computeMATproperty@{computeMATproperty}!computeMATproperty@{computeMATproperty}}
+\index{computeMATproperty@{computeMATproperty}!computeMATproperty@{computeMATproperty}}
+\doxysubsubsection{\texorpdfstring{computeMATproperty()}{computeMATproperty()}}
+{\footnotesize\ttfamily compute\+MATproperty.\+compute\+MATproperty (\begin{DoxyParamCaption}\item[{}]{MAT,  }\item[{}]{prop,  }\item[{}]{skeletal\+Branches = {\ttfamily None},  }\item[{}]{K = {\ttfamily 5} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes Medial Axis-based properties for an image.
+
+Parameters:
+- MAT: Medial axis transform object.
+- property (str): A string signaling the property that should be computed, one of: 'parallelism', 'separation', 'taper', 'mirror'.
+- skeletalBranches: The medial axis skeleton. If this argument is
+                    omitted, skeletalBranches are computed using traceSkeleton.
+                    Default is None.
+- K (int): The length of the window on the skeletal branch for computing
+           the property. Default is 5.
+
+Returns:
+- skeletonImageWithRating: The image of the medial axis skeleton with
+                           the ratings specified by property encoded in the image pixels.
+- skeletalBranches: The individual branches with their rating scores.
+
+Note:
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Morteza Rezanejad
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: Morteza.Rezanejad@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

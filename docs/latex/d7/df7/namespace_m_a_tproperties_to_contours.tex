@@ -1,0 +1,38 @@
+\doxysection{MATproperties\+To\+Contours Namespace Reference}
+\hypertarget{namespace_m_a_tproperties_to_contours}{}\label{namespace_m_a_tproperties_to_contours}\index{MATpropertiesToContours@{MATpropertiesToContours}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_m_a_tproperties_to_contours_a8b33fe55a9944ee0ea0a4ff8d8612b74}{MATproperties\+To\+Contours}} (vec\+LD, MATproperty\+Image, property)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_m_a_tproperties_to_contours_a8b33fe55a9944ee0ea0a4ff8d8612b74}\label{namespace_m_a_tproperties_to_contours_a8b33fe55a9944ee0ea0a4ff8d8612b74} 
+\index{MATpropertiesToContours@{MATpropertiesToContours}!MATpropertiesToContours@{MATpropertiesToContours}}
+\index{MATpropertiesToContours@{MATpropertiesToContours}!MATpropertiesToContours@{MATpropertiesToContours}}
+\doxysubsubsection{\texorpdfstring{MATpropertiesToContours()}{MATpropertiesToContours()}}
+{\footnotesize\ttfamily MATproperties\+To\+Contours.\+MATproperties\+To\+Contours (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{MATproperty\+Image,  }\item[{}]{property }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Maps the MAT properties from the MATpropertyImage back onto the contours
+given by vecLD and stores the results for each contour in the vecLD data structure.
+
+Args:
+    vecLD (dict): The vectorized line drawings data structure.
+    MATpropertyImage (numpy.ndarray): Image with the MAT properties.
+    property (str): Name of the property, which will be used to name the field inside vecLD.
+
+Returns:
+    dict: The updated vecLD data structure with MAT properties mapped to each contour.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

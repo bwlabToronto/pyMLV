@@ -1,0 +1,44 @@
+\doxysection{cleanup\+Junctions Namespace Reference}
+\hypertarget{namespacecleanup_junctions}{}\label{namespacecleanup_junctions}\index{cleanupJunctions@{cleanupJunctions}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecleanup_junctions_ae9ccdf8f9dfaf918af448343e83d09ea}{recursive\+\_\+classes}} (j, merge\+\_\+matrix, is\+\_\+junction\+\_\+available)
+\item 
+\mbox{\hyperlink{namespacecleanup_junctions_a26e512fbfd9cebf3e0a3e53c8ebbd03c}{cleanup\+Junctions}} (junctions, thresh=2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecleanup_junctions_a26e512fbfd9cebf3e0a3e53c8ebbd03c}\label{namespacecleanup_junctions_a26e512fbfd9cebf3e0a3e53c8ebbd03c} 
+\index{cleanupJunctions@{cleanupJunctions}!cleanupJunctions@{cleanupJunctions}}
+\index{cleanupJunctions@{cleanupJunctions}!cleanupJunctions@{cleanupJunctions}}
+\doxysubsubsection{\texorpdfstring{cleanupJunctions()}{cleanupJunctions()}}
+{\footnotesize\ttfamily cleanup\+Junctions.\+cleanup\+Junctions (\begin{DoxyParamCaption}\item[{}]{junctions,  }\item[{}]{thresh = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Cleans up junctions by merging junctions that are within `thresh` pixels of each other.
+
+Parameters:
+    junctions (list of dicts): Junctions as computed by detectJunctions, where each junction is a dictionary
+                               containing at least the 'position' key with [x, y] coordinates.
+    thresh (float): The threshold for merging junctions, in pixels. Default value is 2.
+
+Returns:
+    list of dicts: Cleaned up and merged junctions.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ \Hypertarget{namespacecleanup_junctions_ae9ccdf8f9dfaf918af448343e83d09ea}\label{namespacecleanup_junctions_ae9ccdf8f9dfaf918af448343e83d09ea} 
+\index{cleanupJunctions@{cleanupJunctions}!recursive\_classes@{recursive\_classes}}
+\index{recursive\_classes@{recursive\_classes}!cleanupJunctions@{cleanupJunctions}}
+\doxysubsubsection{\texorpdfstring{recursive\_classes()}{recursive\_classes()}}
+{\footnotesize\ttfamily cleanup\+Junctions.\+recursive\+\_\+classes (\begin{DoxyParamCaption}\item[{}]{j,  }\item[{}]{merge\+\_\+matrix,  }\item[{}]{is\+\_\+junction\+\_\+available }\end{DoxyParamCaption})}
+

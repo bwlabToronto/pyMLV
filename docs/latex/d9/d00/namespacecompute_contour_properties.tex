@@ -1,0 +1,38 @@
+\doxysection{compute\+Contour\+Properties Namespace Reference}
+\hypertarget{namespacecompute_contour_properties}{}\label{namespacecompute_contour_properties}\index{computeContourProperties@{computeContourProperties}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecompute_contour_properties_a5b12f02543a4b3ffb508664059dfc50c}{compute\+Contour\+Properties}} (vec\+LD, which\+Props=\mbox{[}\textquotesingle{}orientation\textquotesingle{}, \textquotesingle{}length\textquotesingle{}, \textquotesingle{}curvature\textquotesingle{}, \textquotesingle{}junctions\textquotesingle{}\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecompute_contour_properties_a5b12f02543a4b3ffb508664059dfc50c}\label{namespacecompute_contour_properties_a5b12f02543a4b3ffb508664059dfc50c} 
+\index{computeContourProperties@{computeContourProperties}!computeContourProperties@{computeContourProperties}}
+\index{computeContourProperties@{computeContourProperties}!computeContourProperties@{computeContourProperties}}
+\doxysubsubsection{\texorpdfstring{computeContourProperties()}{computeContourProperties()}}
+{\footnotesize\ttfamily compute\+Contour\+Properties.\+compute\+Contour\+Properties (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{which\+Props = {\ttfamily \mbox{[}\textquotesingle{}orientation\textquotesingle{},~\textquotesingle{}length\textquotesingle{},~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\textquotesingle{}curvature\textquotesingle{},~\textquotesingle{}junctions\textquotesingle{}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes contour properties for the vectorized line drawing.
+
+Args:
+    vecLD (LineDrawingStructure): The vectorized line drawing data structure.
+    whichProps (str or list, optional): String or list of strings defining which properties to compute.
+        Options are: 'orientation', 'length', 'curvature', 'junctions'.
+        Default is ['orientation', 'length', 'curvature', 'junctions'].
+
+Returns:
+    LineDrawingStructure: A vector LD of structs with the requested contour properties added.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

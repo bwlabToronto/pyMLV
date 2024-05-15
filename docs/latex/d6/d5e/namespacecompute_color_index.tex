@@ -1,0 +1,39 @@
+\doxysection{compute\+Color\+Index Namespace Reference}
+\hypertarget{namespacecompute_color_index}{}\label{namespacecompute_color_index}\index{computeColorIndex@{computeColorIndex}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecompute_color_index_aa85c5daa66f31f61809f14208805ace6}{compute\+Color\+Index}} (vec\+LD, property)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecompute_color_index_aa85c5daa66f31f61809f14208805ace6}\label{namespacecompute_color_index_aa85c5daa66f31f61809f14208805ace6} 
+\index{computeColorIndex@{computeColorIndex}!computeColorIndex@{computeColorIndex}}
+\index{computeColorIndex@{computeColorIndex}!computeColorIndex@{computeColorIndex}}
+\doxysubsubsection{\texorpdfstring{computeColorIndex()}{computeColorIndex()}}
+{\footnotesize\ttfamily compute\+Color\+Index.\+compute\+Color\+Index (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{property }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes a color index for drawing line drawings with their properties.
+Used by drawLinedrawingProperty and drawAllProperties.
+
+Args:
+    vecLD (LineDrawingStructure): The vectorized line drawing with its properties computed.
+    property (str): One of 'length', 'curvature', 'orientation'.
+
+Returns:
+    tuple: A tuple containing:
+        - colorIdx (list): A list with one vector per cell, specifying the index into the color map for each line segment.
+        - cmap (str): The color map appropriate for this property.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

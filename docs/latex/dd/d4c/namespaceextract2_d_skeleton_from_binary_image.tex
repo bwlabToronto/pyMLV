@@ -1,0 +1,61 @@
+\doxysection{extract2\+DSkeleton\+From\+Binary\+Image Namespace Reference}
+\hypertarget{namespaceextract2_d_skeleton_from_binary_image}{}\label{namespaceextract2_d_skeleton_from_binary_image}\index{extract2DSkeletonFromBinaryImage@{extract2DSkeletonFromBinaryImage}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceextract2_d_skeleton_from_binary_image_a36df5955628ba22fcd551d99ebb06e37}{extract2\+DSkeleton\+From\+Binary\+Image}} (binary\+Image, threshold)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceextract2_d_skeleton_from_binary_image_a36df5955628ba22fcd551d99ebb06e37}\label{namespaceextract2_d_skeleton_from_binary_image_a36df5955628ba22fcd551d99ebb06e37} 
+\index{extract2DSkeletonFromBinaryImage@{extract2DSkeletonFromBinaryImage}!extract2DSkeletonFromBinaryImage@{extract2DSkeletonFromBinaryImage}}
+\index{extract2DSkeletonFromBinaryImage@{extract2DSkeletonFromBinaryImage}!extract2DSkeletonFromBinaryImage@{extract2DSkeletonFromBinaryImage}}
+\doxysubsubsection{\texorpdfstring{extract2DSkeletonFromBinaryImage()}{extract2DSkeletonFromBinaryImage()}}
+{\footnotesize\ttfamily extract2\+DSkeleton\+From\+Binary\+Image.\+extract2\+DSkeleton\+From\+Binary\+Image (\begin{DoxyParamCaption}\item[{}]{binary\+Image,  }\item[{}]{threshold }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Extracts a 2D skeleton from a binary image.
+
+This function performs skeletonization on a binary image, yielding the average 
+outward flux image, the skeleton image, a distance-transformed image, and a thinned 
+binary image. The skeletonization process is influenced by the specified threshold.
+
+Args:
+    binaryImage (numpy.ndarray): A binary image where the objects are marked with 1's and 
+    the background is marked with 0's.
+    threshold (float): A threshold value used in the skeletonization process.
+
+Returns:
+    tuple: A tuple (fluxImage, skeletonImage, distImage, thin_boundary) where:
+        fluxImage (numpy.ndarray): Average outward flux image computed from the distance transform.
+        skeletonImage (numpy.ndarray): A binary image of the same size as binaryImage, 
+        with 1's representing the skeleton.
+        distImage (numpy.ndarray): A distance-transformed image of the same size as binaryImage.
+        thin_boundary (numpy.ndarray): A thinned version of the binary image.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Morteza Rezanejad
+McGill University, Montreal, QC, 2019
+
+Contact: morteza [at] cim [dot] mcgill [dot] ca
+-----------------------------------------------------
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Skeletonization package from earlier work of Morteza Rezanejad
+Check the https://github.com/mrezanejad/AOFSkeletons
+\end{DoxyVerb}
+ 

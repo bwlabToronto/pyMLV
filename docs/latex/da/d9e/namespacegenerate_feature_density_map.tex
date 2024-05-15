@@ -1,0 +1,53 @@
+\doxysection{generate\+Feature\+Density\+Map Namespace Reference}
+\hypertarget{namespacegenerate_feature_density_map}{}\label{namespacegenerate_feature_density_map}\index{generateFeatureDensityMap@{generateFeatureDensityMap}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacegenerate_feature_density_map_a22ed8c0e2d4815cebf9cb35060529314}{generate\+Feature\+Density\+Map}} (vec\+LD, property, smoothing\+Sigma=0, junction\+Types=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacegenerate_feature_density_map_a22ed8c0e2d4815cebf9cb35060529314}\label{namespacegenerate_feature_density_map_a22ed8c0e2d4815cebf9cb35060529314} 
+\index{generateFeatureDensityMap@{generateFeatureDensityMap}!generateFeatureDensityMap@{generateFeatureDensityMap}}
+\index{generateFeatureDensityMap@{generateFeatureDensityMap}!generateFeatureDensityMap@{generateFeatureDensityMap}}
+\doxysubsubsection{\texorpdfstring{generateFeatureDensityMap()}{generateFeatureDensityMap()}}
+{\footnotesize\ttfamily generate\+Feature\+Density\+Map.\+generate\+Feature\+Density\+Map (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{property,  }\item[{}]{smoothing\+Sigma = {\ttfamily 0},  }\item[{}]{junction\+Types = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generates a feature density map (FDM) for a specified contour property in a vectorized line drawing.
+Optionally applies Gaussian smoothing to the density map.
+
+This function creates a density map based on the specified contour property present in the vectorized
+line drawing. If smoothing is requested, it applies a 2D Gaussian smoothing operation with the specified
+standard deviation.
+
+Args:
+    vecLD (dict): The vectorized line drawing data structure with the contour property already computed.
+    property (str): The name of the contour property for which the FDM is generated. Valid options include
+                    'length', 'curvature', 'orientation', 'junctions', 'mirror', 'parallelism', 'separation'.
+    smoothingSigma (float, optional): The standard deviation of the 2D Gaussian smoothing kernel, in pixels.
+                                      Default is 0, indicating no smoothing.
+    junctionTypes (list of str, optional): Only relevant when `property` is 'junctions'. Specifies the types
+                                           of junctions to consider. Default is None, which considers all junctions.
+
+Returns:
+    numpy.ndarray: The feature density map (FDM) with the same size as the original image. The FDM is generated
+                   using raw feature values without any normalization applied.
+
+Notes:
+- For properties like 'junctions', 'mirror', 'parallelism', 'separation', additional considerations might
+  be necessary to accurately generate the density map.
+- The user may want to normalize the resulting FDM to sum to 1 (as a probability distribution) or to have
+  0 mean and unit standard deviation for further analysis.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

@@ -1,0 +1,45 @@
+\doxysection{get\+Distance\+From\+Line\+Segment Namespace Reference}
+\hypertarget{namespaceget_distance_from_line_segment}{}\label{namespaceget_distance_from_line_segment}\index{getDistanceFromLineSegment@{getDistanceFromLineSegment}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceget_distance_from_line_segment_a653c0643b629639172efd3d8188c75d2}{get\+Distance\+From\+Line\+Segment}} (XY)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceget_distance_from_line_segment_a653c0643b629639172efd3d8188c75d2}\label{namespaceget_distance_from_line_segment_a653c0643b629639172efd3d8188c75d2} 
+\index{getDistanceFromLineSegment@{getDistanceFromLineSegment}!getDistanceFromLineSegment@{getDistanceFromLineSegment}}
+\index{getDistanceFromLineSegment@{getDistanceFromLineSegment}!getDistanceFromLineSegment@{getDistanceFromLineSegment}}
+\doxysubsubsection{\texorpdfstring{getDistanceFromLineSegment()}{getDistanceFromLineSegment()}}
+{\footnotesize\ttfamily get\+Distance\+From\+Line\+Segment.\+get\+Distance\+From\+Line\+Segment (\begin{DoxyParamCaption}\item[{}]{XY }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculates the distance of each point in a set from a line segment.
+
+This function computes the distance of all points in a given set from the line segment 
+that connects the last point to the first point in the set. The set of points and the 
+line segment are defined in 2D space.
+
+Args:
+    XY (numpy.ndarray): An n x 2 array of xy coordinates, where each row represents 
+    a point in 2D space.
+
+Returns:
+    numpy.ndarray: An array of distances, where each element is the distance of the 
+    corresponding point in XY from the line segment connecting the first and last points of XY.
+
+Notes:
+- The line segment is defined by the first and last points in the XY array.
+- The distance is computed for each point in XY to this line segment.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Morteza Rezanejad
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: Morteza.Rezanejad@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

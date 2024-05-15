@@ -1,0 +1,42 @@
+\doxysection{get\+Curvature\+Stats Namespace Reference}
+\hypertarget{namespaceget_curvature_stats}{}\label{namespaceget_curvature_stats}\index{getCurvatureStats@{getCurvatureStats}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceget_curvature_stats_a772d15ecbce9407552c589f9abeb2701}{get\+Curvature\+Stats}} (vec\+LD, num\+Bins=8, minmax\+Curvature=\mbox{[}0, 90\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceget_curvature_stats_a772d15ecbce9407552c589f9abeb2701}\label{namespaceget_curvature_stats_a772d15ecbce9407552c589f9abeb2701} 
+\index{getCurvatureStats@{getCurvatureStats}!getCurvatureStats@{getCurvatureStats}}
+\index{getCurvatureStats@{getCurvatureStats}!getCurvatureStats@{getCurvatureStats}}
+\doxysubsubsection{\texorpdfstring{getCurvatureStats()}{getCurvatureStats()}}
+{\footnotesize\ttfamily get\+Curvature\+Stats.\+get\+Curvature\+Stats (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{num\+Bins = {\ttfamily 8},  }\item[{}]{minmax\+Curvature = {\ttfamily \mbox{[}0,~90\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes the curvature histogram with logarithmically scaled bins, weighted by segment length.
+
+Input: 
+    vecLD - vectorized line drawing
+    numBins - number of histogram bins; default: 8
+    minmaxCurvature - the minimum and maximum curvature: used as the lower bound of the histogram
+                      (default: [0, 90])
+
+Output:
+    vecLD - the line drawing structure with curvature histogram added for each contour
+    curvatureHistogram - the histogram of curvature of line segments, 
+                          weighted by their lengths
+    bins - a vector with the bin centers
+    shortName - 'curv'
+   
+-----------------------------------------------------
+This file is part of the Mid Level Vision Toolbox: 
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+------------------------------------------------------
+\end{DoxyVerb}
+ 

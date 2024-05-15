@@ -1,0 +1,54 @@
+\doxysection{compute\+AOF Namespace Reference}
+\hypertarget{namespacecompute_a_o_f}{}\label{namespacecompute_a_o_f}\index{computeAOF@{computeAOF}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecompute_a_o_f_ad86f1f58b3934ed48fa2bcd4276bd562}{compute\+AOF}} (D, IDX, sphere\+\_\+points, epsilon)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecompute_a_o_f_ad86f1f58b3934ed48fa2bcd4276bd562}\label{namespacecompute_a_o_f_ad86f1f58b3934ed48fa2bcd4276bd562} 
+\index{computeAOF@{computeAOF}!computeAOF@{computeAOF}}
+\index{computeAOF@{computeAOF}!computeAOF@{computeAOF}}
+\doxysubsubsection{\texorpdfstring{computeAOF()}{computeAOF()}}
+{\footnotesize\ttfamily compute\+AOF.\+compute\+AOF (\begin{DoxyParamCaption}\item[{}]{D,  }\item[{}]{IDX,  }\item[{}]{sphere\+\_\+points,  }\item[{}]{epsilon }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function computes the gradient vector field with regard to a distance function.
+
+Parameters:
+D (array_like): Distance map computed with respect to the binary image.
+IDX (array_like): The index of the closest point to the boundary.
+sphere_points (array_like): Points on a sphere, used in the computation.
+epsilon (float): A small value used to stabilize computations.
+
+Returns:
+array_like: Flux image, a 2D matrix with average outward flux values computed 
+from the gradient vector field of a binary image.
+
+-----------------------------------------------------
+Notes:
+This function is part of the skeletonization package based on earlier work by Morteza Rezanejad.
+Check the GitHub repository at https://github.com/mrezanejad/AOFSkeletons for more details.
+
+License:
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+Author:
+Morteza Rezanejad
+McGill University, Montreal, QC, 2019
+Contact: morteza [at] cim [dot] mcgill [dot] ca
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

@@ -1,0 +1,43 @@
+\doxysection{compute\+Junction\+Angles\+Types Namespace Reference}
+\hypertarget{namespacecompute_junction_angles_types}{}\label{namespacecompute_junction_angles_types}\index{computeJunctionAnglesTypes@{computeJunctionAnglesTypes}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecompute_junction_angles_types_a4d56cf912019c827b0e7af528d00cf23}{compute\+Junction\+Angles\+Types}} (junctions, vec\+\_\+ld)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecompute_junction_angles_types_a4d56cf912019c827b0e7af528d00cf23}\label{namespacecompute_junction_angles_types_a4d56cf912019c827b0e7af528d00cf23} 
+\index{computeJunctionAnglesTypes@{computeJunctionAnglesTypes}!computeJunctionAnglesTypes@{computeJunctionAnglesTypes}}
+\index{computeJunctionAnglesTypes@{computeJunctionAnglesTypes}!computeJunctionAnglesTypes@{computeJunctionAnglesTypes}}
+\doxysubsubsection{\texorpdfstring{computeJunctionAnglesTypes()}{computeJunctionAnglesTypes()}}
+{\footnotesize\ttfamily compute\+Junction\+Angles\+Types.\+compute\+Junction\+Angles\+Types (\begin{DoxyParamCaption}\item[{}]{junctions,  }\item[{}]{vec\+\_\+ld }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes the types and angles for the junctions and adds them to the junctions
+data structure.
+
+Parameters:
+    junctions (list of dicts): The detected and cleaned up junctions.
+    vecLD (dict): The line drawing data structure for looking up line orientations and lengths.
+
+Returns:
+    list of dicts: The same junctions with fields for types, minAngle, and maxAngle added.
+                   Junction type is based on maxAngle 'a', categorized as:
+                    - 'T': T junction - three segments: 160 < a < 200
+                    - 'Arrow': arrow junctions - three segments: a > 200
+                    - 'Y': Y junctions - three segments: a < 160
+                    - 'X': X junctions - four segments.
+                    - 'Star': Star junctions - more than four segments
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

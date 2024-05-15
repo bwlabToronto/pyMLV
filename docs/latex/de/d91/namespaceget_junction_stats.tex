@@ -1,0 +1,43 @@
+\doxysection{get\+Junction\+Stats Namespace Reference}
+\hypertarget{namespaceget_junction_stats}{}\label{namespaceget_junction_stats}\index{getJunctionStats@{getJunctionStats}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceget_junction_stats_abe9f118340c2043b66bcdd341ad0c72c}{get\+Junction\+Stats}} (vec\+LD, num\+Angle\+Bins=8, junction\+Types=\mbox{[}\textquotesingle{}T\textquotesingle{}, \textquotesingle{}Y\textquotesingle{}, \textquotesingle{}X\textquotesingle{}, \textquotesingle{}Arrow\textquotesingle{}, \textquotesingle{}Star\textquotesingle{}\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceget_junction_stats_abe9f118340c2043b66bcdd341ad0c72c}\label{namespaceget_junction_stats_abe9f118340c2043b66bcdd341ad0c72c} 
+\index{getJunctionStats@{getJunctionStats}!getJunctionStats@{getJunctionStats}}
+\index{getJunctionStats@{getJunctionStats}!getJunctionStats@{getJunctionStats}}
+\doxysubsubsection{\texorpdfstring{getJunctionStats()}{getJunctionStats()}}
+{\footnotesize\ttfamily get\+Junction\+Stats.\+get\+Junction\+Stats (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{num\+Angle\+Bins = {\ttfamily 8},  }\item[{}]{junction\+Types = {\ttfamily \mbox{[}\textquotesingle{}T\textquotesingle{},~\textquotesingle{}Y\textquotesingle{},~\textquotesingle{}X\textquotesingle{},~\textquotesingle{}Arrow\textquotesingle{},~\textquotesingle{}Star\textquotesingle{}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes the histograms for junction types and junction angles.
+
+Input:
+    vecLD - vectorized line drawing
+    numAngleBins - the number of bins for the junction angle histogram
+                   default: 8
+    junctionTypes - which types of junctions to include
+                    default: {'T', 'Y', 'X', 'Arrow', 'Star'}
+
+Return:
+    vecLD - vectorized line drawing with the junction histograms added
+    histograms - the histograms of junction types and junction angles, 
+                 weighted by their lengths
+    bins - a vector with the bin centers
+    shortNames - {'juncType', 'juncAngle'}
+   
+-----------------------------------------------------
+This file is part of the Mid Level Vision Toolbox: 
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+------------------------------------------------------
+\end{DoxyVerb}
+ 

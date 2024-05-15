@@ -1,0 +1,46 @@
+\doxysection{save\+Scene\+LDs\+To\+Table Namespace Reference}
+\hypertarget{namespacesave_scene_l_ds_to_table}{}\label{namespacesave_scene_l_ds_to_table}\index{saveSceneLDsToTable@{saveSceneLDsToTable}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesave_scene_l_ds_to_table_a9b840d6b17f7509eac5741f98106a03a}{save\+Scene\+LDs\+To\+Table}} (csv\+File\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacesave_scene_l_ds_to_table_a9b840d6b17f7509eac5741f98106a03a}\label{namespacesave_scene_l_ds_to_table_a9b840d6b17f7509eac5741f98106a03a} 
+\index{saveSceneLDsToTable@{saveSceneLDsToTable}!saveSceneLDsToTable@{saveSceneLDsToTable}}
+\index{saveSceneLDsToTable@{saveSceneLDsToTable}!saveSceneLDsToTable@{saveSceneLDsToTable}}
+\doxysubsubsection{\texorpdfstring{saveSceneLDsToTable()}{saveSceneLDsToTable()}}
+{\footnotesize\ttfamily save\+Scene\+LDs\+To\+Table.\+save\+Scene\+LDs\+To\+Table (\begin{DoxyParamCaption}\item[{}]{csv\+File\+Name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Writes the histogram properties of all scene line drawings to a CSV file.
+
+This function processes vectorized line drawings, computes their statistical properties, 
+and writes these properties to a CSV file. The function returns the data table that was 
+written to the file and the updated vectorized line drawings with their statistics.
+
+Args:
+    csvFileName (str): The file name for the CSV file where the data will be saved.
+
+Returns:
+    tuple: A tuple (resultsTable, statsLD) where:
+        resultsTable (pandas.DataFrame): The table that got written to the CSV file.
+        statsLD (list or similar structure): Vectorized line drawings with their statistics added.
+
+Notes:
+- The function is intended for use with a collection of scene line drawings, where each 
+  drawing is represented in a vectorized format.
+- The statistical properties are likely based on the histogram properties of these line drawings.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

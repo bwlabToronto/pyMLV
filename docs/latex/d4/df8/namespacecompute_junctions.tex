@@ -1,0 +1,43 @@
+\doxysection{compute\+Junctions Namespace Reference}
+\hypertarget{namespacecompute_junctions}{}\label{namespacecompute_junctions}\index{computeJunctions@{computeJunctions}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecompute_junctions_a86b74827c5a1b3911543a718241d9c1f}{compute\+Junctions}} (vec\+LD)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecompute_junctions_a86b74827c5a1b3911543a718241d9c1f}\label{namespacecompute_junctions_a86b74827c5a1b3911543a718241d9c1f} 
+\index{computeJunctions@{computeJunctions}!computeJunctions@{computeJunctions}}
+\index{computeJunctions@{computeJunctions}!computeJunctions@{computeJunctions}}
+\doxysubsubsection{\texorpdfstring{computeJunctions()}{computeJunctions()}}
+{\footnotesize\ttfamily compute\+Junctions.\+compute\+Junctions (\begin{DoxyParamCaption}\item[{}]{vec\+LD }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes all junctions between contours in the vectorized line drawing vecLD.
+
+Args:
+    vecLD (LineDrawingStructure): The vectorized line drawing data structure.
+
+Returns:
+    LineDrawingStructure: A vector LD of structs with junction information added.
+
+Output Structure:
+    Each junction consists of the following information:
+    - contourIDs (list): Vector of IDs of contours involved in the junction.
+    - segmentIDs (list): Vector of IDs of the segments within these contours.
+    - position (list): Location of the junction [x, y].
+    - angle (float): Smallest angle of the junction.
+    - type (str): Based on the largest angle a, one of: 'T', 'Y', 'X', 'Arrow', 'Star'.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

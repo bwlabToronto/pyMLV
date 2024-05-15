@@ -1,0 +1,76 @@
+\doxysection{map\+MATto\+Contour Namespace Reference}
+\hypertarget{namespacemap_m_a_tto_contour}{}\label{namespacemap_m_a_tto_contour}\index{mapMATtoContour@{mapMATtoContour}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemap_m_a_tto_contour_abcbb4993a2e2a9d949c397fec2b6937c}{get\+Intersection\+Tangents}} (x1, y1, r1, x2, y2, r2)
+\item 
+\mbox{\hyperlink{namespacemap_m_a_tto_contour_ab37d4a21934e4f599d5d88a91c8f75f0}{get\+Tangent\+Points\+Contour}} (contour, imsize)
+\item 
+\mbox{\hyperlink{namespacemap_m_a_tto_contour_a2d064f3ee95e022f777caf2b4e0dbd96}{map\+MATto\+Contour}} (skeletal\+Branches, img\+LD, skeleton\+Image\+With\+Rating)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacemap_m_a_tto_contour_abcbb4993a2e2a9d949c397fec2b6937c}\label{namespacemap_m_a_tto_contour_abcbb4993a2e2a9d949c397fec2b6937c} 
+\index{mapMATtoContour@{mapMATtoContour}!getIntersectionTangents@{getIntersectionTangents}}
+\index{getIntersectionTangents@{getIntersectionTangents}!mapMATtoContour@{mapMATtoContour}}
+\doxysubsubsection{\texorpdfstring{getIntersectionTangents()}{getIntersectionTangents()}}
+{\footnotesize\ttfamily map\+MATto\+Contour.\+get\+Intersection\+Tangents (\begin{DoxyParamCaption}\item[{}]{x1,  }\item[{}]{y1,  }\item[{}]{r1,  }\item[{}]{x2,  }\item[{}]{y2,  }\item[{}]{r2 }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacemap_m_a_tto_contour_ab37d4a21934e4f599d5d88a91c8f75f0}\label{namespacemap_m_a_tto_contour_ab37d4a21934e4f599d5d88a91c8f75f0} 
+\index{mapMATtoContour@{mapMATtoContour}!getTangentPointsContour@{getTangentPointsContour}}
+\index{getTangentPointsContour@{getTangentPointsContour}!mapMATtoContour@{mapMATtoContour}}
+\doxysubsubsection{\texorpdfstring{getTangentPointsContour()}{getTangentPointsContour()}}
+{\footnotesize\ttfamily map\+MATto\+Contour.\+get\+Tangent\+Points\+Contour (\begin{DoxyParamCaption}\item[{}]{contour,  }\item[{}]{imsize }\end{DoxyParamCaption})}
+
+\Hypertarget{namespacemap_m_a_tto_contour_a2d064f3ee95e022f777caf2b4e0dbd96}\label{namespacemap_m_a_tto_contour_a2d064f3ee95e022f777caf2b4e0dbd96} 
+\index{mapMATtoContour@{mapMATtoContour}!mapMATtoContour@{mapMATtoContour}}
+\index{mapMATtoContour@{mapMATtoContour}!mapMATtoContour@{mapMATtoContour}}
+\doxysubsubsection{\texorpdfstring{mapMATtoContour()}{mapMATtoContour()}}
+{\footnotesize\ttfamily map\+MATto\+Contour.\+map\+MATto\+Contour (\begin{DoxyParamCaption}\item[{}]{skeletal\+Branches,  }\item[{}]{img\+LD,  }\item[{}]{skeleton\+Image\+With\+Rating }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Maps property scores computed on the Medial Axis Transform (MAT) back to a line drawing image.
+
+This function takes scores computed on the MAT and maps them back to the corresponding contours
+in a line drawing image. If a line drawing contour corresponds to two medial axis branches, the 
+function computes the maximum of the two scores for mapping.
+
+Args:
+    skeletalBranches: Branches traced from the skeleton representation.
+    imgLD (numpy.ndarray): The binary line drawing image.
+    skeletonImageWithRating (numpy.ndarray): The 2D matrix of the skeleton image with MAT-based scores.
+
+Returns:
+    numpy.ndarray: A binary line drawing image with property scores mapped from the skeleton image 
+                   with MAT-based scores.
+
+Notes:
+- The function is designed to work with properties computed on the Medial Axis Transform (MAT) 
+  of a line drawing.
+- If there are two medial axis branches around a line drawing contour, the function chooses the 
+  maximum score between the two for mapping.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Morteza Rezanejad
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: Morteza.Rezanejad@gmail.com
+-----------------------------------------------------
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+\end{DoxyVerb}
+ 

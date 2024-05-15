@@ -1,0 +1,48 @@
+\doxysection{compute\+All\+MATproperties Namespace Reference}
+\hypertarget{namespacecompute_all_m_a_tproperties}{}\label{namespacecompute_all_m_a_tproperties}\index{computeAllMATproperties@{computeAllMATproperties}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecompute_all_m_a_tproperties_a990724713a97644ae61010a1136fdb48}{compute\+All\+MATproperties}} (MAT, img\+LD, prop=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecompute_all_m_a_tproperties_a990724713a97644ae61010a1136fdb48}\label{namespacecompute_all_m_a_tproperties_a990724713a97644ae61010a1136fdb48} 
+\index{computeAllMATproperties@{computeAllMATproperties}!computeAllMATproperties@{computeAllMATproperties}}
+\index{computeAllMATproperties@{computeAllMATproperties}!computeAllMATproperties@{computeAllMATproperties}}
+\doxysubsubsection{\texorpdfstring{computeAllMATproperties()}{computeAllMATproperties()}}
+{\footnotesize\ttfamily compute\+All\+MATproperties.\+compute\+All\+MATproperties (\begin{DoxyParamCaption}\item[{}]{MAT,  }\item[{}]{img\+LD,  }\item[{}]{prop = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes all medial axis-based properties for a line drawing image
+given its medial axis representation.
+
+Parameters:
+- MAT: Medial axis transform of the line drawing.
+- imgLD: The line drawing image as an array.
+- properties (list of str, optional): The type of property that the user wants to look at.
+  Options include:
+  1. 'parallelism'
+  2. 'separation'
+  3. 'mirror'
+  4. 'taper'
+  If properties are given empty or None, the code produces three properties
+  ('parallelism', 'separation', 'mirror') by default.
+
+Returns:
+- MATcontourImages: The contour images rated by the specific set of properties.
+- MATskeletonImages: The medial axis transform images rated by the specific set of properties.
+- skeletalBranches: The set of skeletal branches traced from the medial axis transform.
+
+Note:
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

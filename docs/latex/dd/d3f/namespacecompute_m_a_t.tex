@@ -1,0 +1,40 @@
+\doxysection{compute\+MAT Namespace Reference}
+\hypertarget{namespacecompute_m_a_t}{}\label{namespacecompute_m_a_t}\index{computeMAT@{computeMAT}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecompute_m_a_t_ae671b2d95773764e719f4e2021f6c115}{compute\+MAT}} (img\+LD, threshold\+\_\+angle=28)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecompute_m_a_t_ae671b2d95773764e719f4e2021f6c115}\label{namespacecompute_m_a_t_ae671b2d95773764e719f4e2021f6c115} 
+\index{computeMAT@{computeMAT}!computeMAT@{computeMAT}}
+\index{computeMAT@{computeMAT}!computeMAT@{computeMAT}}
+\doxysubsubsection{\texorpdfstring{computeMAT()}{computeMAT()}}
+{\footnotesize\ttfamily compute\+MAT.\+compute\+MAT (\begin{DoxyParamCaption}\item[{}]{img\+LD,  }\item[{}]{threshold\+\_\+angle = {\ttfamily 28} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Extracts the Medial Axis Transform from a given line drawing image (imgLD) and returns its distance map,
+its average out flux (AOF) map, and the skeleton.
+
+Args:
+    imgLD (ndarray): A line drawing image.
+    threshold_angle (float, optional): Threshold on the object angle in degrees. Default is 28 degrees.
+
+Returns:
+    dict: A dictionary with the following fields:
+        - 'skeleton' (ndarray): A binary image the same size as imgLD. 1s represent where the skeleton appears.
+        - 'distance_map' (ndarray): A distance-transformed image of the same size as imgLD.
+        - 'AOF' (ndarray): Average outward flux image computed from the distance transform.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Morteza Rezanejad
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: Morteza.Rezanejad@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

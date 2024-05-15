@@ -1,0 +1,42 @@
+\doxysection{draw\+All\+Properties Namespace Reference}
+\hypertarget{namespacedraw_all_properties}{}\label{namespacedraw_all_properties}\index{drawAllProperties@{drawAllProperties}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacedraw_all_properties_a69ee252ef0e5a0dc539592e7f3fe9c34}{draw\+All\+Properties}} (vec\+LD, mode=\textquotesingle{}subplot\textquotesingle{}, properties=\mbox{[}\textquotesingle{}Original\textquotesingle{}, \textquotesingle{}Length\textquotesingle{}, \textquotesingle{}Orientation\textquotesingle{}, \textquotesingle{}Curvature\textquotesingle{}, \textquotesingle{}Junctions\textquotesingle{}, \textquotesingle{}Mirror\textquotesingle{}, \textquotesingle{}Parallelism\textquotesingle{}, \textquotesingle{}Separation\textquotesingle{}\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacedraw_all_properties_a69ee252ef0e5a0dc539592e7f3fe9c34}\label{namespacedraw_all_properties_a69ee252ef0e5a0dc539592e7f3fe9c34} 
+\index{drawAllProperties@{drawAllProperties}!drawAllProperties@{drawAllProperties}}
+\index{drawAllProperties@{drawAllProperties}!drawAllProperties@{drawAllProperties}}
+\doxysubsubsection{\texorpdfstring{drawAllProperties()}{drawAllProperties()}}
+{\footnotesize\ttfamily draw\+All\+Properties.\+draw\+All\+Properties (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{mode = {\ttfamily \textquotesingle{}subplot\textquotesingle{}},  }\item[{}]{properties = {\ttfamily \mbox{[}\textquotesingle{}Original\textquotesingle{},\textquotesingle{}Length\textquotesingle{}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\textquotesingle{}Orientation\textquotesingle{},\textquotesingle{}Curvature\textquotesingle{}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\textquotesingle{}Junctions\textquotesingle{},\textquotesingle{}Mirror\textquotesingle{}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\textquotesingle{}Parallelism\textquotesingle{},\textquotesingle{}Separation\textquotesingle{}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Draws the original line drawing and all of its properties.
+
+Input:
+    vecLD - the vectorized line drawing to be drawn
+    mode - one of: 'subplot' - draw properties into one figure using subplot (default)
+                   'separate' - draw properties into separate figures
+    properties - a cell array of text labels of the properties to be drawn
+                 default: ['Original', 'Length', 'Orientation', 'Curvature', 'Junctions', 'mirror', 'parallelism', 'separation']
+
+Return:
+    figIDs - a vector of the figure IDs of the individual figures.
+             just one ID for mode = 'subplots'
+
+See also drawLinedrawing, drawLinedrawingProperty
+
+-----------------------------------------------------
+This file is part of the Mid Level Vision Toolbox: 
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+------------------------------------------------------
+\end{DoxyVerb}
+ 

@@ -1,0 +1,49 @@
+\doxysection{predict\+Contours\+By\+Stats\+Model Namespace Reference}
+\hypertarget{namespacepredict_contours_by_stats_model}{}\label{namespacepredict_contours_by_stats_model}\index{predictContoursByStatsModel@{predictContoursByStatsModel}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepredict_contours_by_stats_model_a84137a126aca9e04f4c12d38665723fc}{histogram\+To\+Table}} (histogram, short\+Name, bins=None)
+\item 
+\mbox{\hyperlink{namespacepredict_contours_by_stats_model_a7f8585524cd51be82b3dac24f7947bb0}{predict\+Contours\+By\+Stats\+Model}} (vec\+LD, Mdl)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacepredict_contours_by_stats_model_a84137a126aca9e04f4c12d38665723fc}\label{namespacepredict_contours_by_stats_model_a84137a126aca9e04f4c12d38665723fc} 
+\index{predictContoursByStatsModel@{predictContoursByStatsModel}!histogramToTable@{histogramToTable}}
+\index{histogramToTable@{histogramToTable}!predictContoursByStatsModel@{predictContoursByStatsModel}}
+\doxysubsubsection{\texorpdfstring{histogramToTable()}{histogramToTable()}}
+{\footnotesize\ttfamily predict\+Contours\+By\+Stats\+Model.\+histogram\+To\+Table (\begin{DoxyParamCaption}\item[{}]{histogram,  }\item[{}]{short\+Name,  }\item[{}]{bins = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A placeholder function that should be implemented to convert histograms to table rows.
+\end{DoxyVerb}
+ \Hypertarget{namespacepredict_contours_by_stats_model_a7f8585524cd51be82b3dac24f7947bb0}\label{namespacepredict_contours_by_stats_model_a7f8585524cd51be82b3dac24f7947bb0} 
+\index{predictContoursByStatsModel@{predictContoursByStatsModel}!predictContoursByStatsModel@{predictContoursByStatsModel}}
+\index{predictContoursByStatsModel@{predictContoursByStatsModel}!predictContoursByStatsModel@{predictContoursByStatsModel}}
+\doxysubsubsection{\texorpdfstring{predictContoursByStatsModel()}{predictContoursByStatsModel()}}
+{\footnotesize\ttfamily predict\+Contours\+By\+Stats\+Model.\+predict\+Contours\+By\+Stats\+Model (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{Mdl }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generates predictions for individual contours based on a pre-trained statistical model.
+
+Args:
+    vecLD (dict): A dictionary representing a vectorized line drawing. This structure should
+                  already contain all relevant feature histograms for contours.
+    Mdl (scikit-learn model): A pre-trained regression model (e.g., from scikit-learn) applied to
+                              contour features to generate predictions.
+
+Returns:
+    numpy.ndarray: An array of predicted scores for the individual contours, in the same order as
+                   the contours in vecLD.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

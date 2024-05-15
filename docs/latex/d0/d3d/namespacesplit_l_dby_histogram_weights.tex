@@ -1,0 +1,52 @@
+\doxysection{split\+LDby\+Histogram\+Weights Namespace Reference}
+\hypertarget{namespacesplit_l_dby_histogram_weights}{}\label{namespacesplit_l_dby_histogram_weights}\index{splitLDbyHistogramWeights@{splitLDbyHistogramWeights}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesplit_l_dby_histogram_weights_a6a41b6d6c2d82acf617208e915501b02}{split\+LDby\+Histogram\+Weights}} (vec\+LD, properties, fraction, histogram\+Weights)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacesplit_l_dby_histogram_weights_a6a41b6d6c2d82acf617208e915501b02}\label{namespacesplit_l_dby_histogram_weights_a6a41b6d6c2d82acf617208e915501b02} 
+\index{splitLDbyHistogramWeights@{splitLDbyHistogramWeights}!splitLDbyHistogramWeights@{splitLDbyHistogramWeights}}
+\index{splitLDbyHistogramWeights@{splitLDbyHistogramWeights}!splitLDbyHistogramWeights@{splitLDbyHistogramWeights}}
+\doxysubsubsection{\texorpdfstring{splitLDbyHistogramWeights()}{splitLDbyHistogramWeights()}}
+{\footnotesize\ttfamily split\+LDby\+Histogram\+Weights.\+split\+LDby\+Histogram\+Weights (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{properties,  }\item[{}]{fraction,  }\item[{}]{histogram\+Weights }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Splits up the contours in the line drawing vecLD according to feature
+properties, weighted by the histogramWeights.
+
+Parameters:
+- vecLD (dict): Vectorized line drawing to be split. The structure should
+  already contain all relevant feature histograms. See also: getContourPropertiesStats.
+- properties (list of str): The property or properties to be considered.
+  Implemented properties include 'Length', 'Orientation', 'Curvature', 'Junctions'.
+  Properties can either be one of these strings or a list of more than one.
+  If more than one property is included, the rankings according to the properties
+  are linearly combined using weights.
+- fraction (float): The fraction of pixels to preserve. Only whole contours will
+  be assigned. The splitting is conservative such that *at most* this fraction
+  of pixels are preserved. This means that it could happen that one contour
+  in the middle of the distribution does not get assigned to either topLD or bottomLD.
+- histogramWeights (list of lists): A list of weight vectors corresponding to each
+  property in `properties`, used for weighting the histograms for each property.
+  The histograms are weighted and summed according to these weight vectors, then
+  combined and ranked.
+
+Returns:
+- topLD (dict): Line drawing structure with the top-ranked contours.
+- bottomLD (dict): Line drawing structure with the bottom-ranked contours.
+
+Note:
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox: 
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

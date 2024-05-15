@@ -1,0 +1,52 @@
+\doxysection{import\+SVG Namespace Reference}
+\hypertarget{namespaceimport_s_v_g}{}\label{namespaceimport_s_v_g}\index{importSVG@{importSVG}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceimport_s_v_g_ae78797d95ba7229cd2e292d8e0fea645}{parse\+Child\+Nodes}} (the\+Node, vec\+LD, group\+Transform)
+\item 
+\mbox{\hyperlink{namespaceimport_s_v_g_a3b0c92628393fa350ff80449b8e4d20f}{import\+SVG}} (svg\+Filename, imsize=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceimport_s_v_g_a3b0c92628393fa350ff80449b8e4d20f}\label{namespaceimport_s_v_g_a3b0c92628393fa350ff80449b8e4d20f} 
+\index{importSVG@{importSVG}!importSVG@{importSVG}}
+\index{importSVG@{importSVG}!importSVG@{importSVG}}
+\doxysubsubsection{\texorpdfstring{importSVG()}{importSVG()}}
+{\footnotesize\ttfamily import\+SVG.\+import\+SVG (\begin{DoxyParamCaption}\item[{}]{svg\+Filename,  }\item[{}]{imsize = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Imports an SVG image into a vecLD structure.
+
+Parameters:
+- svgFilename (str): File name for an SVG file.
+- imsize (tuple, optional): The image size as (width, height). If not provided,
+                            the image size will be determined from the SVG file.
+
+Returns:
+- vecLD (dict): A dictionary representing the vecLD data structure with the contours
+                from the SVG file. This structure typically includes keys for contours,
+                image size, and other relevant information extracted from the SVG.
+
+Note:
+This function is experimental and does not implement all aspects of the SVG standard.
+In particular, it does not translate any text, embedded images, shape fill, or gradients.
+Some aspects of this function are untested because suitable SVG files containing the
+relevant features were not available. If you encounter any errors, please email the SVG
+file you were trying to load to dirk.walther@gmail.com, and I will try my best to
+address the issue.
+
+This function is part of the Mid Level Vision Toolbox: http://www.mlvtoolbox.org
+
+Copyright:
+Dirk Bernhardt-Walther, University of Toronto, Toronto, Ontario, Canada, 2023.
+
+Contact:
+dirk.walther@gmail.com
+\end{DoxyVerb}
+ \Hypertarget{namespaceimport_s_v_g_ae78797d95ba7229cd2e292d8e0fea645}\label{namespaceimport_s_v_g_ae78797d95ba7229cd2e292d8e0fea645} 
+\index{importSVG@{importSVG}!parseChildNodes@{parseChildNodes}}
+\index{parseChildNodes@{parseChildNodes}!importSVG@{importSVG}}
+\doxysubsubsection{\texorpdfstring{parseChildNodes()}{parseChildNodes()}}
+{\footnotesize\ttfamily import\+SVG.\+parse\+Child\+Nodes (\begin{DoxyParamCaption}\item[{}]{the\+Node,  }\item[{}]{vec\+LD,  }\item[{}]{group\+Transform }\end{DoxyParamCaption})}
+

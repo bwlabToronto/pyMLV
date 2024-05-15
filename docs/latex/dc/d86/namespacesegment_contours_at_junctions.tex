@@ -1,0 +1,46 @@
+\doxysection{segment\+Contours\+At\+Junctions Namespace Reference}
+\hypertarget{namespacesegment_contours_at_junctions}{}\label{namespacesegment_contours_at_junctions}\index{segmentContoursAtJunctions@{segmentContoursAtJunctions}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesegment_contours_at_junctions_aa755f0dab8ce24d66c944f1f06f81d3b}{segment\+Contours\+At\+Junctions}} (vec\+LD)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacesegment_contours_at_junctions_aa755f0dab8ce24d66c944f1f06f81d3b}\label{namespacesegment_contours_at_junctions_aa755f0dab8ce24d66c944f1f06f81d3b} 
+\index{segmentContoursAtJunctions@{segmentContoursAtJunctions}!segmentContoursAtJunctions@{segmentContoursAtJunctions}}
+\index{segmentContoursAtJunctions@{segmentContoursAtJunctions}!segmentContoursAtJunctions@{segmentContoursAtJunctions}}
+\doxysubsubsection{\texorpdfstring{segmentContoursAtJunctions()}{segmentContoursAtJunctions()}}
+{\footnotesize\ttfamily segment\+Contours\+At\+Junctions.\+segment\+Contours\+At\+Junctions (\begin{DoxyParamCaption}\item[{}]{vec\+LD }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates a new line drawing with contours segmented at junction points.
+
+This function processes a vectorized line drawing, identifying and segmenting contours at junction points.
+In the resulting line drawing, contours will terminate at junction points rather than running through them,
+making the new drawing structurally different from the original while maintaining its visual integrity.
+
+Args:
+    vecLD (dict): The vectorized line drawing data structure with junctions already computed.
+                  If there is no 'junctions' key in the dict, junctions will be computed.
+
+Returns:
+    dict: The new line drawing data structure with contours split at junctions.
+
+Notes:
+- The function assumes that `vecLD` is a dictionary-like structure that may contain a key 'junctions' 
+  with computed junction data. If 'junctions' is not present, the function will first compute junctions.
+- This function is useful for preparing line drawings for analyses that require understanding of contour 
+  intersections and terminations.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

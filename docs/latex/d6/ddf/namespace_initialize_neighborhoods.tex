@@ -1,0 +1,39 @@
+\doxysection{Initialize\+Neighborhoods Namespace Reference}
+\hypertarget{namespace_initialize_neighborhoods}{}\label{namespace_initialize_neighborhoods}\index{InitializeNeighborhoods@{InitializeNeighborhoods}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_initialize_neighborhoods_a46aef78e131712be4c0dfc3b27641709}{Initialize\+Neighborhoods}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_initialize_neighborhoods_a46aef78e131712be4c0dfc3b27641709}\label{namespace_initialize_neighborhoods_a46aef78e131712be4c0dfc3b27641709} 
+\index{InitializeNeighborhoods@{InitializeNeighborhoods}!InitializeNeighborhoods@{InitializeNeighborhoods}}
+\index{InitializeNeighborhoods@{InitializeNeighborhoods}!InitializeNeighborhoods@{InitializeNeighborhoods}}
+\doxysubsubsection{\texorpdfstring{InitializeNeighborhoods()}{InitializeNeighborhoods()}}
+{\footnotesize\ttfamily Initialize\+Neighborhoods.\+Initialize\+Neighborhoods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initializes an array representing the 8-neighborhoods of a pixel in a 2D grid.
+
+This function creates and returns an array that represents the relative coordinates 
+of the 8 neighbors surrounding a central pixel in a 2D grid. This is commonly used in 
+image processing tasks where neighborhood information of pixels is required.
+
+Returns:
+    numpy.ndarray: An array of shape (8, 2) where each row represents the relative 
+    (row, column) offsets of one of the 8 neighboring pixels.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Morteza Rezanejad
+McGill University, Montreal, QC, 2019
+
+Contact: morteza [at] cim [dot] mcgill [dot] ca
+-----------------------------------------------------
+Skeletonization package from earlier work of Morteza Rezanejad
+Check the https://github.com/mrezanejad/AOFSkeletons
+\end{DoxyVerb}
+ 

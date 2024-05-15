@@ -1,0 +1,53 @@
+\doxysection{average\+Property Namespace Reference}
+\hypertarget{namespaceaverage_property}{}\label{namespaceaverage_property}\index{averageProperty@{averageProperty}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceaverage_property_aabb71c3b4a53bb577a7bc873d7afa8fb}{average\+Property}} (vec\+LD, property)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceaverage_property_aabb71c3b4a53bb577a7bc873d7afa8fb}\label{namespaceaverage_property_aabb71c3b4a53bb577a7bc873d7afa8fb} 
+\index{averageProperty@{averageProperty}!averageProperty@{averageProperty}}
+\index{averageProperty@{averageProperty}!averageProperty@{averageProperty}}
+\doxysubsubsection{\texorpdfstring{averageProperty()}{averageProperty()}}
+{\footnotesize\ttfamily average\+Property.\+average\+Property (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{property }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes the average value of a specified property over an entire vectorized line drawing.
+
+This function calculates the mean of a specified property across all contours or 
+segments in a vectorized line drawing. The property to be averaged can be one of 
+several types, such as orientation, length, curvature, junctions, mirror, parallelism, 
+or separation.
+
+Args:
+    vecLD (LineDrawingStructure): The vectorized line drawing data structure.
+    property (str): A string indicating the property to be computed. Valid options include:
+        - 'orientation': Concatenate all straight line segments and return the orientation 
+          of the resulting vector in degrees.
+        - 'length': Average of the lengths of the individual contours in pixels.
+        - 'curvature': Mean curvature over all line segments, weighted by the number of 
+          pixels in the segments, in degrees per pixel.
+        - 'junctions': Number of junctions per 10,000 pixels, computed as the sum over 
+          normJunctionTypeHistogram.
+        - 'mirror', 'parallelism', 'separation': Average value over all contour pixels, 
+          a number between 0 and 1.
+
+Returns:
+    float: The mean value of the specified property according to the descriptions above.
+
+Notes:
+- The computation of the average property varies based on the type of property specified.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2023
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

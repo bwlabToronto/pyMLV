@@ -1,0 +1,64 @@
+\doxysection{split\+LDby\+Properties Namespace Reference}
+\hypertarget{namespacesplit_l_dby_properties}{}\label{namespacesplit_l_dby_properties}\index{splitLDbyProperties@{splitLDbyProperties}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesplit_l_dby_properties_ae0bc6374c17e077f7e6c5fa2a146b55e}{split\+LDby\+Properties}} (vec\+LD, properties, fraction=0.\+5, weights=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacesplit_l_dby_properties_ae0bc6374c17e077f7e6c5fa2a146b55e}\label{namespacesplit_l_dby_properties_ae0bc6374c17e077f7e6c5fa2a146b55e} 
+\index{splitLDbyProperties@{splitLDbyProperties}!splitLDbyProperties@{splitLDbyProperties}}
+\index{splitLDbyProperties@{splitLDbyProperties}!splitLDbyProperties@{splitLDbyProperties}}
+\doxysubsubsection{\texorpdfstring{splitLDbyProperties()}{splitLDbyProperties()}}
+{\footnotesize\ttfamily split\+LDby\+Properties.\+split\+LDby\+Properties (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{properties,  }\item[{}]{fraction = {\ttfamily 0.5},  }\item[{}]{weights = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Splits up the contours in the line drawing vecLD according to feature properties.
+
+Inputs:
+    vecLD - Vectorized line drawing to be split. The structure should already contain
+            all relevant feature histograms. 
+            See also: getContourPropertiesStats
+
+    properties - The property or properties to be considered. These properties are implemented:
+                 'Length', 'Orientation', 'Curvature', 'Junctions', 'Random'
+                 Properties can either be one of these strings or a list of more than one.
+                 If more than one property is included, the rankings according to the properties
+                 are linearly combined using weights.
+                 Features are ranked as follows:
+                   'Length': by total length of contours (sum of the histogram)
+                             topLD: longest; bottomLD: shortest
+                   'Curvature': by the average curvature, weighted by segment length
+                                topLD: most angular; bottomLD: most straight
+                   'Orientation': weighted by cos - sin of the orientation angle
+                                  topLD: most horizontal; bottomLD: most vertical
+                   'Junctions': weighted by the total number of junctions
+                                that the contour participates in.
+                                topLD: most junctions; bottomLD: least junctions
+                   'Random': a random split of the contours
+
+    fraction - The fraction of pixels to preserve. Default: 0.5
+               Only whole contours will be assigned. The splitting is conservative such
+               that *at most* fraction pixels are preserved. This means that it could happen
+               that one contour in the middle of the distribution does not get assigned to
+               either topLD or bottomLD.
+
+    weights - Array of weights of the same size as properties.
+              Default: [] - all properties are weighted equally, same as ones(1,N)
+
+Returns:
+    topLD - Line drawing structure with the top-ranked contours.
+    bottomLD - Line drawing structure with the bottom-ranked contours.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox: 
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

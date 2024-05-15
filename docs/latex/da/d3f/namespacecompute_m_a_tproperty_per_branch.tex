@@ -1,0 +1,40 @@
+\doxysection{compute\+MATproperty\+Per\+Branch Namespace Reference}
+\hypertarget{namespacecompute_m_a_tproperty_per_branch}{}\label{namespacecompute_m_a_tproperty_per_branch}\index{computeMATpropertyPerBranch@{computeMATpropertyPerBranch}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecompute_m_a_tproperty_per_branch_af245941a545cd84cab6540c659b76d36}{compute\+MATproperty\+Per\+Branch}} (cur\+Branch, prop, K=5)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecompute_m_a_tproperty_per_branch_af245941a545cd84cab6540c659b76d36}\label{namespacecompute_m_a_tproperty_per_branch_af245941a545cd84cab6540c659b76d36} 
+\index{computeMATpropertyPerBranch@{computeMATpropertyPerBranch}!computeMATpropertyPerBranch@{computeMATpropertyPerBranch}}
+\index{computeMATpropertyPerBranch@{computeMATpropertyPerBranch}!computeMATpropertyPerBranch@{computeMATpropertyPerBranch}}
+\doxysubsubsection{\texorpdfstring{computeMATpropertyPerBranch()}{computeMATpropertyPerBranch()}}
+{\footnotesize\ttfamily compute\+MATproperty\+Per\+Branch.\+compute\+MATproperty\+Per\+Branch (\begin{DoxyParamCaption}\item[{}]{cur\+Branch,  }\item[{}]{prop,  }\item[{}]{K = {\ttfamily 5} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes the specified MAT property for a particular skeletal branch.
+
+Parameters:
+- curBranch: The skeletal branch for which the property should be computed.
+- property (str): A string signaling the property that should be computed,
+                  one of: 'parallelism', 'separation', 'taper', 'mirror'.
+- K (int, optional): The length of the window on the skeletal branch for computing
+                     the property. Default is 5.
+
+Returns:
+- result: The skeletal branch with the respective scores applied.
+
+Note:
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

@@ -1,0 +1,48 @@
+\doxysection{get\+MATproperty\+Stats Namespace Reference}
+\hypertarget{namespaceget_m_a_tproperty_stats}{}\label{namespaceget_m_a_tproperty_stats}\index{getMATpropertyStats@{getMATpropertyStats}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceget_m_a_tproperty_stats_af8db0ebef04f567ce749f170c4ef0d90}{get\+MATproperty\+Stats}} (vec\+LD, prop, num\+Bins=8)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceget_m_a_tproperty_stats_af8db0ebef04f567ce749f170c4ef0d90}\label{namespaceget_m_a_tproperty_stats_af8db0ebef04f567ce749f170c4ef0d90} 
+\index{getMATpropertyStats@{getMATpropertyStats}!getMATpropertyStats@{getMATpropertyStats}}
+\index{getMATpropertyStats@{getMATpropertyStats}!getMATpropertyStats@{getMATpropertyStats}}
+\doxysubsubsection{\texorpdfstring{getMATpropertyStats()}{getMATpropertyStats()}}
+{\footnotesize\ttfamily get\+MATproperty\+Stats.\+get\+MATproperty\+Stats (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{prop,  }\item[{}]{num\+Bins = {\ttfamily 8} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes the histogram for a MAT (Mirror, Asymmetry, Taper) property in a vectorized line drawing.
+
+This function processes a vectorized line drawing structure and computes a histogram for a specified
+MAT property. The property should already be computed in the vectorized line drawing structure.
+
+Args:
+    vecLD (LineDrawingStructure): The vectorized line drawing structure with the MAT property already computed.
+    property (str): The name of the property, used to read the property from vecLD.
+    numBins (int, optional): The number of bins for the histogram. Default is 8.
+
+Returns:
+    tuple: A tuple (vecLD, histogram, bins, shortName) where:
+        vecLD (LineDrawingStructure): The updated line drawing structure with property histogram added for each contour.
+        histogram (numpy.ndarray): The summary histogram of the property for the entire drawing.
+        bins (numpy.ndarray): A vector with the bin centers.
+        shortName (str): A shortened name of the property (first 3 letters).
+
+Notes:
+- This function is typically used in the context of Mirror, Asymmetry, Taper (MAT) properties of line drawings.
+- The histogram provides a statistical summary of the specified property across the entire drawing.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

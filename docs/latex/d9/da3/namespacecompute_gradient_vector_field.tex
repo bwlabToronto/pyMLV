@@ -1,0 +1,49 @@
+\doxysection{compute\+Gradient\+Vector\+Field Namespace Reference}
+\hypertarget{namespacecompute_gradient_vector_field}{}\label{namespacecompute_gradient_vector_field}\index{computeGradientVectorField@{computeGradientVectorField}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecompute_gradient_vector_field_a7375848279f615d287940035fe025e52}{compute\+Gradient\+Vector\+Field}} (binary\+Image)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecompute_gradient_vector_field_a7375848279f615d287940035fe025e52}\label{namespacecompute_gradient_vector_field_a7375848279f615d287940035fe025e52} 
+\index{computeGradientVectorField@{computeGradientVectorField}!computeGradientVectorField@{computeGradientVectorField}}
+\index{computeGradientVectorField@{computeGradientVectorField}!computeGradientVectorField@{computeGradientVectorField}}
+\doxysubsubsection{\texorpdfstring{computeGradientVectorField()}{computeGradientVectorField()}}
+{\footnotesize\ttfamily compute\+Gradient\+Vector\+Field.\+compute\+Gradient\+Vector\+Field (\begin{DoxyParamCaption}\item[{}]{binary\+Image }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes the gradient vector field of a binary image.
+
+This function transforms a binary image, identifies the outer boundary, 
+and calculates two distance transforms, IDX1 and IDX2, from the binary image 
+and its complement, respectively. It then computes a histogram of the distance 
+transforms and combines them to form the gradient vector field.
+
+Args:
+    binaryImage (numpy.ndarray): A binary image where the objects are marked with 1's and 
+    the background is marked with 0's.
+
+Returns:
+    tuple: A tuple (D, IDX) where:
+        D (numpy.ndarray): The difference between the distance transforms from the 
+        binary image and its complement.
+        IDX (numpy.ndarray): The combined distance transform.
+
+Notes:
+- The function modifies the input binary image by converting 1s to 255s and vice versa.
+- It loads an external file 'outerBoundaryOriginal.mat' for the outer boundary calculation.
+- It plots histograms of the distance transforms.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

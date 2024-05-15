@@ -1,0 +1,44 @@
+\doxysection{sample\+\_\+sphere\+\_\+2D Namespace Reference}
+\hypertarget{namespacesample__sphere__2_d}{}\label{namespacesample__sphere__2_d}\index{sample\_sphere\_2D@{sample\_sphere\_2D}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesample__sphere__2_d_a633a878629a33ecefd5bf637c668ca19}{sample\+\_\+sphere\+\_\+2D}} (number\+\_\+of\+\_\+samples)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacesample__sphere__2_d_a633a878629a33ecefd5bf637c668ca19}\label{namespacesample__sphere__2_d_a633a878629a33ecefd5bf637c668ca19} 
+\index{sample\_sphere\_2D@{sample\_sphere\_2D}!sample\_sphere\_2D@{sample\_sphere\_2D}}
+\index{sample\_sphere\_2D@{sample\_sphere\_2D}!sample\_sphere\_2D@{sample\_sphere\_2D}}
+\doxysubsubsection{\texorpdfstring{sample\_sphere\_2D()}{sample\_sphere\_2D()}}
+{\footnotesize\ttfamily sample\+\_\+sphere\+\_\+2\+D.\+sample\+\_\+sphere\+\_\+2D (\begin{DoxyParamCaption}\item[{}]{number\+\_\+of\+\_\+samples }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generates evenly distributed points on the circumference of a unit circle (2D sphere).
+
+This function creates a set of points evenly distributed along the circumference of a unit circle.
+It uses a uniform angular distribution to place each point on the circle.
+
+Args:
+    number_of_samples (int): The number of points to be generated on the circle.
+
+Returns:
+    numpy.ndarray: A 2D array of shape (number_of_samples, 2) where each row 
+    represents the (x, y) coordinates of a point on the unit circle.
+
+Notes:
+- The function calculates the angular step based on the number of samples and 
+  uses trigonometric functions (sine and cosine) to compute the coordinates.
+- The circle is centered at the origin (0,0) with a radius of 1.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

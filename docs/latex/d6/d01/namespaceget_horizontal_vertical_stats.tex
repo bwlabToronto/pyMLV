@@ -1,0 +1,42 @@
+\doxysection{get\+Horizontal\+Vertical\+Stats Namespace Reference}
+\hypertarget{namespaceget_horizontal_vertical_stats}{}\label{namespaceget_horizontal_vertical_stats}\index{getHorizontalVerticalStats@{getHorizontalVerticalStats}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceget_horizontal_vertical_stats_ad8923e0bf9d825e899b69fbd5be76dd7}{get\+Horizontal\+Vertical\+Stats}} (vec\+LD, num\+Bins=8)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceget_horizontal_vertical_stats_ad8923e0bf9d825e899b69fbd5be76dd7}\label{namespaceget_horizontal_vertical_stats_ad8923e0bf9d825e899b69fbd5be76dd7} 
+\index{getHorizontalVerticalStats@{getHorizontalVerticalStats}!getHorizontalVerticalStats@{getHorizontalVerticalStats}}
+\index{getHorizontalVerticalStats@{getHorizontalVerticalStats}!getHorizontalVerticalStats@{getHorizontalVerticalStats}}
+\doxysubsubsection{\texorpdfstring{getHorizontalVerticalStats()}{getHorizontalVerticalStats()}}
+{\footnotesize\ttfamily get\+Horizontal\+Vertical\+Stats.\+get\+Horizontal\+Vertical\+Stats (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{num\+Bins = {\ttfamily 8} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes the histogram of horizontal-vertical as:
+(abs(cosd(orientation)) - abs(sind(orientation)))
+The histogram is weighted by segment length.
+
+Input: 
+    vecLD - vectorized line drawing
+    numBins - number of histogram bins; default: 8
+
+Output:
+    vecLD - the line drawing structure with individual orientation histograms added
+    HorVerHistogram - the histogram of orientations of line segments, weighted
+                      by their lengths
+    bins - a vector with the bin centers
+    shortName - 'horver'
+   
+-----------------------------------------------------
+This file is part of the Mid Level Vision Toolbox: 
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+------------------------------------------------------
+\end{DoxyVerb}
+ 

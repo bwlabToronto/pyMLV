@@ -1,0 +1,38 @@
+\doxysection{compute\+Orientation Namespace Reference}
+\hypertarget{namespacecompute_orientation}{}\label{namespacecompute_orientation}\index{computeOrientation@{computeOrientation}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecompute_orientation_a1baeba6fc5aeb15268c42439a7abac23}{compute\+Orientation}} (vec\+LD)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecompute_orientation_a1baeba6fc5aeb15268c42439a7abac23}\label{namespacecompute_orientation_a1baeba6fc5aeb15268c42439a7abac23} 
+\index{computeOrientation@{computeOrientation}!computeOrientation@{computeOrientation}}
+\index{computeOrientation@{computeOrientation}!computeOrientation@{computeOrientation}}
+\doxysubsubsection{\texorpdfstring{computeOrientation()}{computeOrientation()}}
+{\footnotesize\ttfamily compute\+Orientation.\+compute\+Orientation (\begin{DoxyParamCaption}\item[{}]{vec\+LD }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes orientations for the contours in the vectorized line drawing vecLD.
+
+Note that this function computes orientations from 0 to 360 degrees.
+To obtain orientation from 0 to 180, use mod(ori, 180).
+
+Args:
+    vecLD (LineDrawingStructure): The vectorized line drawing data structure.
+
+Returns:
+    LineDrawingStructure: A vector LD of structs with orientation information added.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright (c) 2022 Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

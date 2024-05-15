@@ -1,0 +1,50 @@
+\doxysection{fit\+Line\+Segments Namespace Reference}
+\hypertarget{namespacefit_line_segments}{}\label{namespacefit_line_segments}\index{fitLineSegments@{fitLineSegments}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacefit_line_segments_a199587745a1c1a0cfa86d55269a9a7af}{fit\+Line\+Segments}} (XY)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacefit_line_segments_a199587745a1c1a0cfa86d55269a9a7af}\label{namespacefit_line_segments_a199587745a1c1a0cfa86d55269a9a7af} 
+\index{fitLineSegments@{fitLineSegments}!fitLineSegments@{fitLineSegments}}
+\index{fitLineSegments@{fitLineSegments}!fitLineSegments@{fitLineSegments}}
+\doxysubsubsection{\texorpdfstring{fitLineSegments()}{fitLineSegments()}}
+{\footnotesize\ttfamily fit\+Line\+Segments.\+fit\+Line\+Segments (\begin{DoxyParamCaption}\item[{}]{XY }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Fits a set of line segments to a sequence of traced XY coordinates.
+
+This function takes a sequence of XY coordinates and fits line segments to them. It computes 
+the line segments, the distances of each point to the nearest line segment, and a score 
+representing the amount of bending using the number of points in each line segment.
+
+Args:
+    XY (numpy.ndarray): An n x 2 array of xy coordinates, where each row represents 
+                        a point in 2D space.
+
+Returns:
+    tuple: A tuple (lineSegs, dists, scores) where:
+        lineSegs (list): A list of line segments computed from XY.
+        dists (numpy.ndarray): An array of distances from each point in XY to its nearest line segment.
+        scores (numpy.ndarray): An array representing the amount of bending, computed using 
+                                the number of points in each line segment.
+
+Notes:
+- The algorithm for fitting line segments to the XY coordinates is not specified and would 
+  need to be implemented.
+- This function is useful for tasks such as simplifying traced outlines or paths by approximating 
+  them with a series of straight line segments.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Morteza Rezanejad
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: Morteza.Rezanejad@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

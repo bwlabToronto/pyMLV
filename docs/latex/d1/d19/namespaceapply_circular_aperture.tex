@@ -1,0 +1,47 @@
+\doxysection{apply\+Circular\+Aperture Namespace Reference}
+\hypertarget{namespaceapply_circular_aperture}{}\label{namespaceapply_circular_aperture}\index{applyCircularAperture@{applyCircularAperture}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceapply_circular_aperture_a986bb64843583da40cc46a7d02bb51ec}{apply\+Circular\+Aperture}} (vec\+LD, radius=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceapply_circular_aperture_a986bb64843583da40cc46a7d02bb51ec}\label{namespaceapply_circular_aperture_a986bb64843583da40cc46a7d02bb51ec} 
+\index{applyCircularAperture@{applyCircularAperture}!applyCircularAperture@{applyCircularAperture}}
+\index{applyCircularAperture@{applyCircularAperture}!applyCircularAperture@{applyCircularAperture}}
+\doxysubsubsection{\texorpdfstring{applyCircularAperture()}{applyCircularAperture()}}
+{\footnotesize\ttfamily apply\+Circular\+Aperture.\+apply\+Circular\+Aperture (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{radius = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Clips the contours in a vectorized line drawing at a circular aperture centered at the drawing's center.
+
+This function applies a circular aperture to a vectorized line drawing, effectively clipping 
+the contours to fit within the specified circular area. The aperture is centered at the center 
+of the line drawing.
+
+Args:
+    vecLD (LineDrawingStructure): The vectorized line drawing data structure.
+    radius (float, optional): The radius of the circular aperture. If not specified, the default 
+    is half the minimum dimension of vecLD's image size (min(vecLD.imsize) / 2).
+
+Returns:
+    LineDrawingStructure: The vectorized line drawing with contours clipped to the circular aperture.
+
+References:
+This procedure was used in the following study:
+Choo, H., & Walther, D. B. (2016). Contour junctions underlie neural representations of scene 
+categories in high-level human visual cortex. Neuroimage, 135, 32-44. 
+https://doi.org/10.1016/j.neuroimage.2016.04.021
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

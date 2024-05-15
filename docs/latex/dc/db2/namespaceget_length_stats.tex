@@ -1,0 +1,48 @@
+\doxysection{get\+Length\+Stats Namespace Reference}
+\hypertarget{namespaceget_length_stats}{}\label{namespaceget_length_stats}\index{getLengthStats@{getLengthStats}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceget_length_stats_a1de4313ae5ad68649c7aa91eecbaaf5b}{get\+Length\+Stats}} (vec\+LD, num\+Bins=8, minmax\+Length=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceget_length_stats_a1de4313ae5ad68649c7aa91eecbaaf5b}\label{namespaceget_length_stats_a1de4313ae5ad68649c7aa91eecbaaf5b} 
+\index{getLengthStats@{getLengthStats}!getLengthStats@{getLengthStats}}
+\index{getLengthStats@{getLengthStats}!getLengthStats@{getLengthStats}}
+\doxysubsubsection{\texorpdfstring{getLengthStats()}{getLengthStats()}}
+{\footnotesize\ttfamily get\+Length\+Stats.\+get\+Length\+Stats (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{num\+Bins = {\ttfamily 8},  }\item[{}]{minmax\+Length = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Computes the length histogram of a vectorized line drawing with logarithmically scaled bins, 
+weighted by segment length.
+
+This function calculates the histogram of lengths of line segments in a vectorized line 
+drawing (vecLD). The bins for the histogram are logarithmically scaled. The histogram is 
+weighted by the length of each line segment.
+
+Args:
+    vecLD (LineDrawingStructure): The vectorized line drawing data structure.
+    numBins (int, optional): Number of histogram bins. Defaults to 8.
+    minmaxLength (list, optional): The minimum and maximum length to be considered for 
+    the histogram. The minimum length is used as the lower bound of the histogram.
+    Defaults to [2, sum(vecLD.imsize)].
+
+Returns:
+    tuple: A tuple (vecLD, lengthHistogram, bins, shortName) where:
+        vecLD (LineDrawingStructure): The updated line drawing structure with length histogram added.
+        lengthHistogram (numpy.ndarray): The histogram of lengths of line segments, weighted by their lengths.
+        bins (numpy.ndarray): A vector with the bin centers.
+        shortName (str): A short name identifier for the histogram, 'len'.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ 

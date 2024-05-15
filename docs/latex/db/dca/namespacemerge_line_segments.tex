@@ -1,0 +1,52 @@
+\doxysection{merge\+Line\+Segments Namespace Reference}
+\hypertarget{namespacemerge_line_segments}{}\label{namespacemerge_line_segments}\index{mergeLineSegments@{mergeLineSegments}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemerge_line_segments_a83507f09689272d9c1986c1a081d1cc0}{remove\+Duplicated\+Contours}} (vec\+LD)
+\item 
+\mbox{\hyperlink{namespacemerge_line_segments_a379eec1678abcecd4355b24411ce7bba}{merge\+Line\+Segments}} (vec\+LD, thresh\+Param)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacemerge_line_segments_a379eec1678abcecd4355b24411ce7bba}\label{namespacemerge_line_segments_a379eec1678abcecd4355b24411ce7bba} 
+\index{mergeLineSegments@{mergeLineSegments}!mergeLineSegments@{mergeLineSegments}}
+\index{mergeLineSegments@{mergeLineSegments}!mergeLineSegments@{mergeLineSegments}}
+\doxysubsubsection{\texorpdfstring{mergeLineSegments()}{mergeLineSegments()}}
+{\footnotesize\ttfamily merge\+Line\+Segments.\+merge\+Line\+Segments (\begin{DoxyParamCaption}\item[{}]{vec\+LD,  }\item[{}]{thresh\+Param }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Merges nearly collinear line segments within each contour of a vectorized line drawing.
+
+Args:
+    vecLD (dict): Vectorized line drawing with contours.
+    threshParam (float): Maximum distance threshold for merging line segments.
+    
+Returns:
+    dict: Updated vectorized line drawing with merged contours.
+
+-----------------------------------------------------
+This function is part of the Mid Level Vision Toolbox:
+http://www.mlvtoolbox.org
+
+Copyright Dirk Bernhardt-Walther
+University of Toronto, Toronto, Ontario, Canada, 2022
+
+Contact: dirk.walther@gmail.com
+-----------------------------------------------------
+\end{DoxyVerb}
+ \Hypertarget{namespacemerge_line_segments_a83507f09689272d9c1986c1a081d1cc0}\label{namespacemerge_line_segments_a83507f09689272d9c1986c1a081d1cc0} 
+\index{mergeLineSegments@{mergeLineSegments}!removeDuplicatedContours@{removeDuplicatedContours}}
+\index{removeDuplicatedContours@{removeDuplicatedContours}!mergeLineSegments@{mergeLineSegments}}
+\doxysubsubsection{\texorpdfstring{removeDuplicatedContours()}{removeDuplicatedContours()}}
+{\footnotesize\ttfamily merge\+Line\+Segments.\+remove\+Duplicated\+Contours (\begin{DoxyParamCaption}\item[{}]{vec\+LD }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Removes duplicated or overlapping contours from a vectorized line drawing.
+
+Args:
+    vecLD (dict): Vectorized line drawing data structure with a 'contours' key.
+
+Returns:
+    dict: Updated vectorized line drawing data structure with duplicated contours removed.
+\end{DoxyVerb}
+ 
