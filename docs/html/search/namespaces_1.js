@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bwdist_0',['bwdist',['../d3/d23/namespacebwdist.html',1,'']]]
+  ['bwdist_0',['bwdist',['../namespacebwdist.html',1,'']]]
 ];

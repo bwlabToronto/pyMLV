@@ -7,7 +7,7 @@ Python version of the Mid-level Vision Toolbox (MLVToolbox) created by the BWLab
 
 The Mid-level Vision Toolbox (MLVToolbox) was created by the BWLab at the University of Toronto as a tool for researchers to extract structural properties of contours such as orientation, length, curvature and junctions present in images. MLVToolbox allows researchers to quantify the presence of perceptual organization cues such as mirror symmetry, ribbon symmetry, and taper symmetry using medial axis properties of contours in naturalistic images. MLVToolbox also provides researchers with a free and easy way to extract visual statistics that underlie our experience of surfaces, objects, scenes and even works of art. It will facilitate reproducible experimental stimulus sets using built-in functions that manipulate contours in images based on one or several mid-level vision properties. In addition, MLVToolbox offers several visualization functions for tracing contour orientations, lengths, curvature, junctions, as well as, medial axis properties on computer-generated and artist-generated line drawings. A contour extraction functionality helps users obtain computer-generated line drawings from real-world photographs. To encourage researcher's exploration of its potential, we have provided several example datasets produced using the MLVToolbox.
 
-We are working on the python version and we have a plan to release the python version soon.<br> 
+This python version now contains most of the functions that are associated with the demos to get contour features and the medial axis demo. The functions related to traceLineDrawing demo is in the final stages of testing. The <br> 
 *_Please stay tuned for updates!_* 
 
 ## Table of Contents
@@ -17,9 +17,7 @@ We are working on the python version and we have a plan to release the python ve
 - [FAQs](#FAQs)
 - [References](#References)
 - [License](#License)
-- [Detailed Function Documentation](https://htmlpreview.github.io/?https://github.com/bwlabToronto/MLV_toolbox/blob/main/doc/index.html)
-
-
+- [Detailed Function Documentation](https://htmlpreview.github.io/?https://github.com/bwlabToronto/pyMVPA/blob/main/docs/html/index.html)
 
 ## Datasets
 
@@ -89,6 +87,6 @@ year = {2019}
 
 ## License
 
-The MLV toolbox contains various modules from different projects. Please take some time to check licenses on the released files. 
+The pyMVPA toolbox contains various modules from different projects. Please take some time to check licenses on the released files. 
 
 
