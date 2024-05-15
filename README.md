@@ -1,4 +1,4 @@
-# pyMVPA
+# pyMLV
 Python version of the Mid-level Vision Toolbox (MLVToolbox) created by the BWLab at the University of Toronto.
 
 
@@ -17,18 +17,18 @@ This Python version now includes most of the functions required for demonstratio
 - [FAQs](#FAQs)
 - [References](#References)
 - [License](#License)
-- [Detailed Function Documentation](https://htmlpreview.github.io/?https://github.com/bwlabToronto/pyMVPA/blob/main/docs/html/index.html)
+- [Detailed Function Documentation](https://htmlpreview.github.io/?https://github.com/bwlabToronto/pyMLV/blob/main/docs/html/index.html)
 
 ## Requirements
 
 <!-- Write that there is a requirements.txt -->
-The pyMVPA toolbox requires Python packages which can be installed using the requirements.txt file. To install the required packages, run the following command in the terminal:
+The pyMLV toolbox requires Python packages which can be installed using the requirements.txt file. To install the required packages, run the following command in the terminal:
 
 ```pip3 install -r requirements.txt```
 
 ## Usage
 
-The pyMVPA toolbox is designed to be user-friendly and easy to use. The toolbox includes several demos that demonstrate the functionality of the toolbox. The demos are located in the `demos` folder. The demos are written in Jupyter notebooks and can be run in JupyterLab or Jupyter Notebook.
+The pyMLV toolbox is designed to be user-friendly and easy to use. The toolbox includes several demos that demonstrate the functionality of the toolbox. The demos are located in the `demos` folder. The demos are written in Jupyter notebooks and can be run in JupyterLab or Jupyter Notebook.
 
 To run the demos, follow these steps:
 1. Clone the repository to your local machine.
