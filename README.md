@@ -17,7 +17,7 @@ This Python version now includes most of the functions required for demonstratio
 - [FAQs](#FAQs)
 - [References](#References)
 - [License](#License)
-- [Detailed Function Documentation](https://htmlpreview.github.io/?https://github.com/bwlabToronto/pyMLV/blob/main/docs/html/index.html)
+- [Detailed Function Documentation](https://github.com/bwlabToronto/pyMLV/blob/main/docs/index.html)
 
 ## Requirements
 
