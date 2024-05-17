@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['parsechildnodes_0',['parseChildNodes',['../namespaceimport_s_v_g.html#ae78797d95ba7229cd2e292d8e0fea645',1,'importSVG']]],
-  ['predictcontoursbystatsmodel_1',['predictContoursByStatsModel',['../namespacepredict_contours_by_stats_model.html#a7f8585524cd51be82b3dac24f7947bb0',1,'predictContoursByStatsModel']]]
+  ['randomlyshiftcontours_0',['randomlyShiftContours',['../namespacerandomly_shift_contours.html#aa67c228c8a760d40dc3374fb932e1bfe',1,'randomlyShiftContours']]],
+  ['recursive_5fclasses_1',['recursive_classes',['../namespacecleanup_junctions.html#ae9ccdf8f9dfaf918af448343e83d09ea',1,'cleanupJunctions']]],
+  ['removeduplicatedcontours_2',['removeDuplicatedContours',['../namespacemerge_line_segments.html#a83507f09689272d9c1986c1a081d1cc0',1,'mergeLineSegments']]],
+  ['removezerolengthcontours_3',['removeZeroLengthContours',['../namespaceremove_zero_length_contours.html#a99470d76739e98627893b71f742739dc',1,'removeZeroLengthContours']]],
+  ['rotatelinedrawing_4',['rotateLinedrawing',['../namespacerotate_linedrawing.html#ada8b773b1924406df7808b4b6ce77098',1,'rotateLinedrawing']]]
 ];

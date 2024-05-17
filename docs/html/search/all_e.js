@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['tracelinedrawingfromedgemap_0',['tracelinedrawingfromedgemap',['../namespacetrace_linedrawing_from_edge_map.html',1,'traceLinedrawingFromEdgeMap'],['../namespacetrace_linedrawing_from_edge_map.html#a6bd09687a36c067d1490d6000165d999',1,'traceLinedrawingFromEdgeMap.traceLinedrawingFromEdgeMap()']]],
-  ['tracelinedrawingfromedgemap_2epy_1',['traceLinedrawingFromEdgeMap.py',['../trace_linedrawing_from_edge_map_8py.html',1,'']]],
-  ['traceskeleton_2',['traceskeleton',['../namespacetrace_skeleton.html',1,'traceSkeleton'],['../namespacetrace_skeleton.html#af2341dd365f9d28f10e3fac368c75f38',1,'traceSkeleton.traceSkeleton()']]],
-  ['traceskeleton_2epy_3',['traceSkeleton.py',['../trace_skeleton_8py.html',1,'']]]
+  ['unique_0',['unique',['../namespaceunique.html',1,'']]],
+  ['unique_2epy_1',['unique.py',['../unique_8py.html',1,'']]],
+  ['unique1d_2',['unique1D',['../namespaceunique.html#afa59b8caa1aebc80ec8c984ae38b24fe',1,'unique']]],
+  ['unique2d_3',['unique2D',['../namespaceunique.html#aa36c5e6d54c7597066971c25e3005935',1,'unique']]],
+  ['unique3d_4',['unique3D',['../namespaceunique.html#a55ed081bb2b84a794f21594ce8952300',1,'unique']]]
 ];

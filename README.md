@@ -64,7 +64,7 @@ We include several data sets, alread processed as vectorized line drawings:
 
 ## FAQs
 
-We are working on this section, please make sure to check back here in the future. As of now, please ask your questions on the discussion page of the MLV toolbox available [here](https://github.com/bwlabToronto/MLV_toolbox/discussions). 
+We are working on this section, please make sure to check back here in the future. As of now, please ask your questions on the discussion page of the MLV toolbox available [here](https://github.com/bwlabToronto/pyMLV/discussions). 
 
 ## References
 
@@ -120,6 +120,6 @@ year = {2019}
 
 ## License
 
-The pyMVPA toolbox contains various modules from different projects. Please take some time to check licenses on the released files. 
+The pyMLV toolbox contains various modules from different projects. Please take some time to check licenses on the released files. 
 
 

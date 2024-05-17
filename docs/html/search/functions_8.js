@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['importsvg_0',['importSVG',['../namespaceimport_s_v_g.html#a3b0c92628393fa350ff80449b8e4d20f',1,'importSVG']]],
-  ['initializeneighborhoods_1',['InitializeNeighborhoods',['../namespace_initialize_neighborhoods.html#a46aef78e131712be4c0dfc3b27641709',1,'InitializeNeighborhoods']]],
-  ['is_5fouter_5fborder_5fpoint_2',['is_outer_border_point',['../namespaceis__outer__border__point.html#a258c17400ea826b7d49f9e72fff82e62',1,'is_outer_border_point']]]
+  ['lineintersection_0',['lineIntersection',['../namespaceline_intersection.html#ad84a57cd90ae2c40c182d63352c74cd3',1,'lineIntersection']]],
+  ['load_5fmat_1',['load_mat',['../namespaceload__mat.html#a4a2389344084290f3b00cb8f054da0ae',1,'load_mat']]]
 ];

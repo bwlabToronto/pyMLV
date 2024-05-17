@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['tracelinedrawingfromedgemap_0',['traceLinedrawingFromEdgeMap',['../namespacetrace_linedrawing_from_edge_map.html#a6bd09687a36c067d1490d6000165d999',1,'traceLinedrawingFromEdgeMap']]],
-  ['traceskeleton_1',['traceSkeleton',['../namespacetrace_skeleton.html#af2341dd365f9d28f10e3fac368c75f38',1,'traceSkeleton']]]
+  ['unique1d_0',['unique1D',['../namespaceunique.html#afa59b8caa1aebc80ec8c984ae38b24fe',1,'unique']]],
+  ['unique2d_1',['unique2D',['../namespaceunique.html#aa36c5e6d54c7597066971c25e3005935',1,'unique']]],
+  ['unique3d_2',['unique3D',['../namespaceunique.html#a55ed081bb2b84a794f21594ce8952300',1,'unique']]]
 ];
