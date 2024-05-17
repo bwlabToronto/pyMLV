@@ -1,27 +1,4 @@
 var searchData=
 [
-  ['generatefeaturedensitymap_0',['generatefeaturedensitymap',['../namespacegenerate_feature_density_map.html',1,'generateFeatureDensityMap'],['../namespacegenerate_feature_density_map.html#a22ed8c0e2d4815cebf9cb35060529314',1,'generateFeatureDensityMap.generateFeatureDensityMap()']]],
-  ['generatefeaturedensitymap_2epy_1',['generateFeatureDensityMap.py',['../generate_feature_density_map_8py.html',1,'']]],
-  ['getbranchderivative_2',['getbranchderivative',['../namespaceget_branch_derivative.html#ad90d42d67b659aa944f102a1b3d98c82',1,'getBranchDerivative.getBranchDerivative()'],['../namespaceget_branch_derivative.html',1,'getBranchDerivative']]],
-  ['getbranchderivative_2epy_3',['getBranchDerivative.py',['../get_branch_derivative_8py.html',1,'']]],
-  ['getcontourpropertiesstats_4',['getcontourpropertiesstats',['../namespaceget_contour_properties_stats.html',1,'getContourPropertiesStats'],['../namespaceget_contour_properties_stats.html#ac4eb99f0b5347b9f5f922fd09c2ad02b',1,'getContourPropertiesStats.getContourPropertiesStats()']]],
-  ['getcontourpropertiesstats_2epy_5',['getContourPropertiesStats.py',['../get_contour_properties_stats_8py.html',1,'']]],
-  ['getcurvaturestats_6',['getcurvaturestats',['../namespaceget_curvature_stats.html',1,'getCurvatureStats'],['../namespaceget_curvature_stats.html#a772d15ecbce9407552c589f9abeb2701',1,'getCurvatureStats.getCurvatureStats()']]],
-  ['getcurvaturestats_2epy_7',['getCurvatureStats.py',['../get_curvature_stats_8py.html',1,'']]],
-  ['getdistancefromlinesegment_8',['getdistancefromlinesegment',['../namespaceget_distance_from_line_segment.html',1,'getDistanceFromLineSegment'],['../namespaceget_distance_from_line_segment.html#a653c0643b629639172efd3d8188c75d2',1,'getDistanceFromLineSegment.getDistanceFromLineSegment()']]],
-  ['getdistancefromlinesegment_2epy_9',['getDistanceFromLineSegment.py',['../get_distance_from_line_segment_8py.html',1,'']]],
-  ['gethorizontalverticalstats_10',['gethorizontalverticalstats',['../namespaceget_horizontal_vertical_stats.html',1,'getHorizontalVerticalStats'],['../namespaceget_horizontal_vertical_stats.html#ad8923e0bf9d825e899b69fbd5be76dd7',1,'getHorizontalVerticalStats.getHorizontalVerticalStats()']]],
-  ['gethorizontalverticalstats_2epy_11',['getHorizontalVerticalStats.py',['../get_horizontal_vertical_stats_8py.html',1,'']]],
-  ['getintersectiontangents_12',['getIntersectionTangents',['../namespacemap_m_a_tto_contour.html#abcbb4993a2e2a9d949c397fec2b6937c',1,'mapMATtoContour']]],
-  ['getjunctionstats_13',['getjunctionstats',['../namespaceget_junction_stats.html',1,'getJunctionStats'],['../namespaceget_junction_stats.html#abe9f118340c2043b66bcdd341ad0c72c',1,'getJunctionStats.getJunctionStats()']]],
-  ['getjunctionstats_2epy_14',['getJunctionStats.py',['../get_junction_stats_8py.html',1,'']]],
-  ['getlengthstats_15',['getlengthstats',['../namespaceget_length_stats.html',1,'getLengthStats'],['../namespaceget_length_stats.html#a1de4313ae5ad68649c7aa91eecbaaf5b',1,'getLengthStats.getLengthStats()']]],
-  ['getlengthstats_2epy_16',['getLengthStats.py',['../get_length_stats_8py.html',1,'']]],
-  ['getmatpropertystats_17',['getmatpropertystats',['../namespaceget_m_a_tproperty_stats.html',1,'getMATpropertyStats'],['../namespaceget_m_a_tproperty_stats.html#af8db0ebef04f567ce749f170c4ef0d90',1,'getMATpropertyStats.getMATpropertyStats()']]],
-  ['getmatpropertystats_2epy_18',['getMATpropertyStats.py',['../get_m_a_tproperty_stats_8py.html',1,'']]],
-  ['getorientationstats_19',['getorientationstats',['../namespaceget_orientation_stats.html#ae8bc3c6b2350ecf1abc5030f48410fc7',1,'getOrientationStats.getOrientationStats()'],['../namespaceget_orientation_stats.html',1,'getOrientationStats']]],
-  ['getorientationstats_2epy_20',['getOrientationStats.py',['../get_orientation_stats_8py.html',1,'']]],
-  ['getouterboundary_21',['getouterboundary',['../namespaceget_outer_boundary.html',1,'getOuterBoundary'],['../namespaceget_outer_boundary.html#a3ff22179e6aad15ce173340064db923d',1,'getOuterBoundary.getOuterBoundary()']]],
-  ['getouterboundary_2epy_22',['getOuterBoundary.py',['../get_outer_boundary_8py.html',1,'']]],
-  ['gettangentpointscontour_23',['getTangentPointsContour',['../namespacemap_m_a_tto_contour.html#ab37d4a21934e4f599d5d88a91c8f75f0',1,'mapMATtoContour']]]
+  ['faqs_0',['FAQs',['../md__r_e_a_d_m_e.html#autotoc_md10',1,'']]]
 ];

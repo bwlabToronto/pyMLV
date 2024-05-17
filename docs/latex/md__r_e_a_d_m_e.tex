@@ -1,0 +1,120 @@
+\chapter{py\+MLV}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{pyMLV@{pyMLV}}
+\label{md__r_e_a_d_m_e_autotoc_md5}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md5}%
+Python version of the Mid-\/level Vision Toolbox (MLVToolbox) created by the BWLab at the University of Toronto.
+
+ \DoxyHorRuler{0}
+
+
+The Mid-\/level Vision Toolbox (MLVToolbox) was created by the BWLab at the University of Toronto as a tool for researchers to extract structural properties of contours such as orientation, length, curvature and junctions present in images. MLVToolbox allows researchers to quantify the presence of perceptual organization cues such as mirror symmetry, ribbon symmetry, and taper symmetry using medial axis properties of contours in naturalistic images. MLVToolbox also provides researchers with a free and easy way to extract visual statistics that underlie our experience of surfaces, objects, scenes and even works of art. It will facilitate reproducible experimental stimulus sets using built-\/in functions that manipulate contours in images based on one or several mid-\/level vision properties. In addition, MLVToolbox offers several visualization functions for tracing contour orientations, lengths, curvature, junctions, as well as, medial axis properties on computer-\/generated and artist-\/generated line drawings. A contour extraction functionality helps users obtain computer-\/generated line drawings from real-\/world photographs. To encourage researcher\textquotesingle{}s exploration of its potential, we have provided several example datasets produced using the MLVToolbox.
+
+This Python version now includes most of the functions required for demonstrations that retrieve contour features and the medial axis. The functions related to the Trace\+Line\+Drawing demo are in the final stages of testing. ~\newline
+ \texorpdfstring{$\ast$}{*}\+\_\+\+Please stay tuned for updates!\+\_\+\texorpdfstring{$\ast$}{*}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{\texorpdfstring{Table of Contents}{Table of Contents}}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Requirements
+\item Usage
+\item Datasets
+\item FAQs
+\item References
+\item License
+\item \href{https://bwlabtoronto.github.io/pyMLV/}{\texttt{ Detailed Function Documentation}}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{\texorpdfstring{Requirements}{Requirements}}\label{md__r_e_a_d_m_e_autotoc_md7}
+The py\+MLV toolbox requires Python packages which can be installed using the requirements.\+txt file. To install the required packages, run the following command in the terminal\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3\ install\ -\/r\ requirements.txt}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__r_e_a_d_m_e_autotoc_md8}
+The py\+MLV toolbox is designed to be user-\/friendly and easy to use. The toolbox includes several demos that demonstrate the functionality of the toolbox. The demos are located in the {\ttfamily demos} folder. The demos are written in Jupyter notebooks and can be run in Jupyter\+Lab or Jupyter Notebook.
+
+To run the demos, follow these steps\+:
+\begin{DoxyEnumerate}
+\item Clone the repository to your local machine.
+\item Navigate to the {\ttfamily demos} folder.
+\item Open the desired demo in Jupyter\+Lab or Jupyter Notebook.
+\item Run the cells in the notebook to see the results.
+\end{DoxyEnumerate}
+
+The demos include the following\+:
+\begin{DoxyItemize}
+\item \href{demos/getcontourfeatures_Single.ipynb}{\texttt{ Demo\+\_\+\+Contour\+Features}}\+: This demo shows how to extract contour features from an image, including orientation, length, curvature, and junctions.
+\item \href{demos/getMedialAxis.ipynb}{\texttt{ Demo\+\_\+\+Medial\+Axis}}\+: This demo shows how to extract the medial axis of an image and visualize it.
+\end{DoxyItemize}
+
+Note\+: The medial axis demo at the moment needs the img\+LD from the MATLAB version due the difference in the way rendering is done in Python and MATLAB. We are working on a solution to this issue.
+
+{\bfseries{Computing Medial Axis Properties}}
+
+
+
+Using MLV, one can compute accurate AOF-\/based medial axis transform (MAT) from binary images. These images can either be rendered from Line\+Drawing (LD) datastructures (check out render\+Linedrawing.\+m function) or be binary images from other sources. Like the example (bunny) above shows, there are some intermediate steps in the process of extracting MAT, including the extraction of the distance map as well as the extraction of the average outward flux map (AOF). This information along with the skeleton is stored in the MAT computed from a binary image. Please see the following example of a mountain scene where the average outward flux map (AOF) is computed from the binary image.
+
+Output\+:
+
+\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{\texorpdfstring{Datasets}{Datasets}}\label{md__r_e_a_d_m_e_autotoc_md9}
+We include several data sets, alread processed as vectorized line drawings\+:
+
+
+\begin{DoxyItemize}
+\item \doxysectlink{md_data_sets_2_toronto_scenes_2_toronto_scenes___readme}{Toronto\+Scenes}{0} data set of 475 scene images
+\item International Affective Picture System (\doxysectlink{md_data_sets_2_i_a_p_s_2_i_a_p_s___readme}{IAPS}{0})
+\item A set of 200 \doxysectlink{md_data_sets_2_architectural_scenes_2_architectural_scenes___readme}{Architectural Scenes}{0}
+\item The Open Affective Standardized Image Set (\doxysectlink{md_data_sets_2_o_a_s_i_s_2_o_a_s_i_s___readme}{OASIS}{0})
+\item The 260 line drawings of objects from \doxysectlink{md_data_sets_2_snodgrass___vanderwart_2_snodgrass___vanderwart___readme}{Snodgrass and Vanderwart (1980)}{0}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysection{\texorpdfstring{FAQs}{FAQs}}\label{md__r_e_a_d_m_e_autotoc_md10}
+We are working on this section, please make sure to check back here in the future. As of now, please ask your questions on the discussion page of the MLV toolbox available \href{https://github.com/bwlabToronto/pyMLV/discussions}{\texttt{ here}}.\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysection{\texorpdfstring{References}{References}}\label{md__r_e_a_d_m_e_autotoc_md11}
+If you use the MLV toolbox, we appreciate it if you cite the following papers as appropriate\+:
+
+Walther, D. B., Farzanfar, D., Han, S., \& Rezanejad, M. (2023). The mid-\/level vision toolbox for computing structural properties of real-\/world images. {\itshape Frontiers in Computer Science}, {\bfseries{5}}. \href{https://doi.org/10.3389/fcomp.2023.1140723}{\texttt{ doi\+: 10.\+3389/fcomp.2023.\+1140723}}
+
+Rezanejad, M., Downs, G., Wilder, J., Walther, D. B., Jepson, A., Dickinson, S., \& Siddiqi, K. (2019). Scene categorization from contours\+: Medial axis based salience measures. In {\itshape Proceedings of the IEEE/\+CVF Conference on Computer Vision and Pattern Recognition} (pp. 4116-\/4124). \href{https://drive.google.com/file/d/1uEVoTjrYzdF-N0ZeR4_B8Le6N4jRtjyf/view?usp=drive_link}{\texttt{ PDF}}
+
+Walther, D. B., \& Shen, D. (2014). Nonaccidental properties underlie human categorization of complex natural scenes. {\itshape Psychological science}, {\bfseries{25}}(4), 851-\/860. \href{https://drive.google.com/file/d/1tVlsjLdlL1mwCbFJhiZ6afGHNXO6-lf-/view?usp=drive_link}{\texttt{ PDF}}
+
+Rezanejad, M., \& Siddiqi, K. (2013). Flux graphs for 2D shape analysis (pp. 41-\/54). Springer London.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Bibtex:}
+\DoxyCodeLine{}
+\DoxyCodeLine{@article\{walther2023mid,}
+\DoxyCodeLine{\ \ title=\{The\ mid-\/level\ vision\ toolbox\ for\ computing\ structural\ properties\ of\ real-\/world\ images\},}
+\DoxyCodeLine{\ \ author=\{Walther,\ Dirk\ B\ and\ Farzanfar,\ Delaram\ and\ Han,\ Seohee\ and\ Rezanejad,\ Morteza\},}
+\DoxyCodeLine{\ \ journal=\{Frontiers\ in\ Computer\ Sciene\},}
+\DoxyCodeLine{\ \ volume=\{5\},}
+\DoxyCodeLine{\ \ year=\{2023\},}
+\DoxyCodeLine{\ \ publisher=\{Frontiers\}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{@InProceedings\{rezanejad2019scene,}
+\DoxyCodeLine{author\ =\ \{Rezanejad,\ Morteza\ and\ Downs,\ Gabriel\ and\ Wilder,\ John\ and\ Walther,\ Dirk\ B\ and\ Jepson,\ Allan\ and\ Dickinson,\ Sven\ and\ Siddiqi,\ Kaleem\},}
+\DoxyCodeLine{title\ =\ \{Scene\ Categorization\ from\ Contours:\ Medial\ Axis\ Based\ Salience\ Measures\},}
+\DoxyCodeLine{booktitle\ =\ \{The\ IEEE\ Conference\ on\ Computer\ Vision\ and\ Pattern\ Recognition\ (CVPR)\},}
+\DoxyCodeLine{month\ =\ \{June\},}
+\DoxyCodeLine{year\ =\ \{2019\}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{@article\{walther2014nonaccidental,}
+\DoxyCodeLine{\ \ title=\{Nonaccidental\ properties\ underlie\ human\ categorization\ of\ complex\ natural\ scenes\},}
+\DoxyCodeLine{\ \ author=\{Walther,\ Dirk\ B\ and\ Shen,\ Dandan\},}
+\DoxyCodeLine{\ \ journal=\{Psychological\ science\},}
+\DoxyCodeLine{\ \ volume=\{25\},}
+\DoxyCodeLine{\ \ number=\{4\},}
+\DoxyCodeLine{\ \ pages=\{851-\/-\/860\},}
+\DoxyCodeLine{\ \ year=\{2014\},}
+\DoxyCodeLine{\ \ publisher=\{Sage\ Publications\ Sage\ CA:\ Los\ Angeles,\ CA\}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{@incollection\{rezanejad2013flux,}
+\DoxyCodeLine{\ \ title=\{Flux\ graphs\ for\ 2D\ shape\ analysis\},}
+\DoxyCodeLine{\ \ author=\{Rezanejad,\ Morteza\ and\ Siddiqi,\ Kaleem\},}
+\DoxyCodeLine{\ \ booktitle=\{Shape\ Perception\ in\ Human\ and\ Computer\ Vision\},}
+\DoxyCodeLine{\ \ pages=\{41-\/-\/54\},}
+\DoxyCodeLine{\ \ year=\{2013\},}
+\DoxyCodeLine{\ \ publisher=\{Springer\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysection{\texorpdfstring{License}{License}}\label{md__r_e_a_d_m_e_autotoc_md12}
+The py\+MLV toolbox contains various modules from different projects. Please take some time to check licenses on the released files. 
