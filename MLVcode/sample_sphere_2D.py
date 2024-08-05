@@ -24,8 +24,10 @@ def sample_sphere_2D(number_of_samples):
     This function is part of the Mid Level Vision Toolbox:
     http://www.mlvtoolbox.org
 
-    Copyright Dirk Bernhardt-Walther
-    University of Toronto, Toronto, Ontario, Canada, 2022
+    Python Implementation: Aravind Narayanan
+    Original MATLAB Implementation: Dirk Bernhardt-Walther
+    Copyright: Dirk Bernhardt-Walther
+    University of Toronto, Toronto, Ontario, Canada, 2024
 
     Contact: dirk.walther@gmail.com
     -----------------------------------------------------

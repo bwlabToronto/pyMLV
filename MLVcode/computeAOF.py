@@ -36,9 +36,9 @@ def computeAOF(D, IDX, sphere_points, epsilon):
     along with this program. If not, see <https://www.gnu.org/licenses/>.
 
     Author:
-    Morteza Rezanejad
-    McGill University, Montreal, QC, 2019
-    Contact: morteza [at] cim [dot] mcgill [dot] ca
+    Aravind Narayanan
+    University of Toronto, Toronto, ON, 2024
+    Contact: aravind [dot] narayanan [at] utoronto [dot] ca
     -----------------------------------------------------
     """
 

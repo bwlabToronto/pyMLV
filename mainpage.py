@@ -1,7 +1,7 @@
 ## @mainpage pyMLV Documentation
 #
 ## @section intro Introduction
-## pyMLV is the Python version of the Mid-level Vision Toolbox (MLVToolbox), created by the BWLab at the University of Toronto.
+## pyMLV is the Python version of the Mid-level Vision Toolbox (MLVToolbox), created by the Aravind Narayanan in BWLab at the University of Toronto.
 ## The toolbox facilitates the extraction and analysis of structural properties in images such as contours' orientation, length, curvature,
 ## and junctions. It supports a variety of research tasks including the identification of perceptual organization cues like mirror symmetry, 
 ## ribbon symmetry, and taper symmetry in naturalistic images.

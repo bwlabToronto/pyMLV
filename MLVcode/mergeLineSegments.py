@@ -13,6 +13,18 @@ def removeDuplicatedContours(vecLD):
 
     Returns:
         dict: Updated vectorized line drawing data structure with duplicated contours removed.
+        
+    -----------------------------------------------------
+    This function is part of the Mid Level Vision Toolbox:
+    http://www.mlvtoolbox.org
+
+    Python Implementation: Aravind Narayanan
+    Original MATLAB Implementation: Dirk Bernhardt-Walther
+    Copyright: Dirk Bernhardt-Walther
+    University of Toronto, Toronto, Ontario, Canada, 2024
+
+    Contact: dirk.walther@gmail.com
+    -----------------------------------------------------
     """
     tempLD = computeLength(vecLD)
     finalToBeRemoved = []
@@ -63,8 +75,10 @@ def mergeLineSegments(vecLD, threshParam):
     This function is part of the Mid Level Vision Toolbox:
     http://www.mlvtoolbox.org
 
-    Copyright Dirk Bernhardt-Walther
-    University of Toronto, Toronto, Ontario, Canada, 2022
+    Python Implementation: Aravind Narayanan
+    Original MATLAB Implementation: Dirk Bernhardt-Walther
+    Copyright: Dirk Bernhardt-Walther
+    University of Toronto, Toronto, Ontario, Canada, 2024
 
     Contact: dirk.walther@gmail.com
     -----------------------------------------------------

@@ -34,14 +34,16 @@ def getOuterBoundary(binaryImage, background):
       is printed during execution.
 
     -----------------------------------------------------
-    This file is part of the Mid Level Vision Toolbox: 
+    This function is part of the Mid Level Vision Toolbox:
     http://www.mlvtoolbox.org
 
-    Copyright Dirk Bernhardt-Walther
-    University of Toronto, Toronto, Ontario, Canada, 2022
+    Python Implementation: Aravind Narayanan
+    Original MATLAB Implementation: Dirk Bernhardt-Walther
+    Copyright: Dirk Bernhardt-Walther
+    University of Toronto, Toronto, Ontario, Canada, 2024
 
     Contact: dirk.walther@gmail.com
-    ------------------------------------------------------
+    -----------------------------------------------------
     """
     m_Neighbors8 = np.array([[-1, -1], [-1, 0], [-1, 1],
                              [0, -1], [0, 1],
